@@ -23,6 +23,7 @@ public class TruckController : MonoBehaviour
 	public float maxMotorTorque;
 	public float maxSteeringAngle;
 	public List<Dot_Truck> truck_Infos;
+    [SerializeField] private float maxThrottleSpeed = 10;	
 	[SerializeField] private bool useTiltLimits;
 	[SerializeField] private float tiltLimit = 126f;
 	[SerializeField] private TMP_Text speedometerText;
@@ -37,6 +38,9 @@ public class TruckController : MonoBehaviour
 	private float gearTimer = .2f; 
 	private bool isChangingGear;
 
+	[SerializeField] private bool atThrottleLimit;
+
+	[SerializeField] private float boosPower = 200;
 
     [SerializeField] private GameObject boostVFX; 
 
@@ -119,7 +123,6 @@ public class TruckController : MonoBehaviour
 	private IEnumerator ChangeGear(int newGear)
 	{
 		isChangingGear = true;
-		print ($"Speed before changing to {newGear} is {Speed}");
 		yield return new WaitForSeconds(gearTimer);
 
 		currentGear = newGear;
@@ -130,7 +133,6 @@ public class TruckController : MonoBehaviour
 		else 
 			gearText.text = "R";
 
-		print ($"Speed after changing to {newGear} is {Speed}");
 		
 	}
 
@@ -145,7 +147,7 @@ public class TruckController : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.LeftShift))
 		{
-			rb.AddForce(transform.forward * 8000); 
+			rb.AddForce(transform.forward * boosPower); 
 			boostVFX.SetActive(true);
 		} else if (boostVFX.activeSelf)
 		{
@@ -167,30 +169,39 @@ public class TruckController : MonoBehaviour
 			brakeTorque = maxMotorTorque / 1.2f; 
 		}
 
+		Speed = rb.linearVelocity.magnitude;
+
+		var visualSpeed = Speed * visualSpeedModifier; 
+		HandleGears(visualSpeed);
+		speedometerText.text = visualSpeed.ToString("F0") + "KM/H";
+
+		atThrottleLimit = visualSpeed > maxThrottleSpeed; 
+
+		if (!atThrottleLimit && visualSpeed > maxThrottleSpeed - 10)
+		{
+			var perc = (visualSpeed - (maxThrottleSpeed - 10)) / 10; 
+			perc = Mathf.Abs(perc - 1);
+
+			motor = motor * perc;
+		}
+
+		if (atThrottleLimit || isChangingGear) motor = 0;
+
 		foreach (Dot_Truck truck_Info in truck_Infos)
 		{
 			if (truck_Info.steering == true) {
 				truck_Info.leftWheel.steerAngle = truck_Info.rightWheel.steerAngle = ((truck_Info.reverseTurn)?-1:1)*steering;
 			}
 
-			if (truck_Info.motor == true && !isChangingGear)
+			if (truck_Info.motor == true)
 			{
 				truck_Info.leftWheel.motorTorque = motor;
 				truck_Info.rightWheel.motorTorque = motor;
 			}
-
 			truck_Info.leftWheel.brakeTorque = brakeTorque;
 			truck_Info.rightWheel.brakeTorque = brakeTorque;
 
-
-			Speed = rb.linearVelocity.magnitude;
-
-			var visualSpeed = Speed * visualSpeedModifier; 
-
-			speedometerText.text = visualSpeed.ToString("F0") + "KM/H";
-
 			VisualizeWheel(truck_Info);
-			HandleGears(visualSpeed);
 		}
 	}
 }

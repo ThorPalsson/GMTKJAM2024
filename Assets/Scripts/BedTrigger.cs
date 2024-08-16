@@ -8,7 +8,7 @@ public class BedTrigger : MonoBehaviour
         if (other.CompareTag("Cargo"))
         {
             var cargo = other.gameObject; 
-            cargo.layer = discarderLayer; 
+           // cargo.layer = discarderLayer; 
             cargo.GetComponent<Cargo>().HasFallen = true;
         }
     }
