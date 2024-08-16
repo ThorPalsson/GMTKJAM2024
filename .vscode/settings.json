@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GMTKJAM2024.sln"
+    "dotnet.defaultSolution": "JeepStranding2.sln"
 }
