@@ -1,5 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using System.Collections;
+using System;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class Dot_Truck : System.Object
@@ -21,11 +25,39 @@ public class TruckController : MonoBehaviour
 	public List<Dot_Truck> truck_Infos;
 	[SerializeField] private bool useTiltLimits;
 	[SerializeField] private float tiltLimit = 126f;
+	[SerializeField] private TMP_Text speedometerText;
+	[SerializeField] private TMP_Text gearText;
 	private float tiltLimitHigh;
+	private Rigidbody rb;
+	[SerializeField] private float visualSpeedModifier = 4;
 
+	private int currentGear; 
+	public Dictionary<int, float> Gears = new Dictionary<int, float>();
+	public int[] Speeds; 
+	private float gearTimer = .2f; 
+	private bool isChangingGear;
+
+
+    [SerializeField] private GameObject boostVFX; 
+
+
+	public float Speed;
+
+	private void Awake() {
+		rb = GetComponent<Rigidbody>();
+	}
 
 	private void Start() {
 		tiltLimitHigh = 360 - tiltLimit; 
+
+		currentGear = 1; 
+		gearText.text = "1";
+
+
+		for (int i = 0; i < Speeds.Length; i++)
+		{
+			Gears.Add(Speeds.Length - i, Speeds[i]);
+		}
 	}
 
 
@@ -55,11 +87,69 @@ public class TruckController : MonoBehaviour
 		transform.localEulerAngles = rotation; 
 	}
 
+	private void HandleGears(float speedValue)
+	{
+		if (isChangingGear) return;
+		var expectedGear = 1; 
+
+		if (speedValue < 0)
+		{
+			expectedGear = -1;
+		} else 
+		{
+			foreach(KeyValuePair<int, float> gear in Gears)
+			{
+				if (speedValue >= gear.Value)
+				{
+					expectedGear = gear.Key;
+					break;
+				}
+			}
+		}
+
+
+		if (expectedGear != currentGear)
+		{
+			StartCoroutine(ChangeGear(expectedGear));
+		}
+
+	}
+
+
+	private IEnumerator ChangeGear(int newGear)
+	{
+		isChangingGear = true;
+		print ($"Speed before changing to {newGear} is {Speed}");
+		yield return new WaitForSeconds(gearTimer);
+
+		currentGear = newGear;
+		isChangingGear = false;
+
+		if (newGear != -1)
+			gearText.text = newGear.ToString();
+		else 
+			gearText.text = "R";
+
+		print ($"Speed after changing to {newGear} is {Speed}");
+		
+	}
+
+
 	public void Update()
 	{
 		if (useTiltLimits)
 		{
 			TiltControl();
+		}
+
+
+		if (Input.GetKey(KeyCode.LeftShift))
+		{
+			rb.AddForce(transform.forward * 8000); 
+			boostVFX.SetActive(true);
+		} else if (boostVFX.activeSelf)
+		{
+			boostVFX.SetActive(false);
 		}
 
 		float input = Input.GetAxis("Vertical");
@@ -83,7 +173,7 @@ public class TruckController : MonoBehaviour
 				truck_Info.leftWheel.steerAngle = truck_Info.rightWheel.steerAngle = ((truck_Info.reverseTurn)?-1:1)*steering;
 			}
 
-			if (truck_Info.motor == true)
+			if (truck_Info.motor == true && !isChangingGear)
 			{
 				truck_Info.leftWheel.motorTorque = motor;
 				truck_Info.rightWheel.motorTorque = motor;
@@ -92,7 +182,15 @@ public class TruckController : MonoBehaviour
 			truck_Info.leftWheel.brakeTorque = brakeTorque;
 			truck_Info.rightWheel.brakeTorque = brakeTorque;
 
+
+			Speed = rb.linearVelocity.magnitude;
+
+			var visualSpeed = Speed * visualSpeedModifier; 
+
+			speedometerText.text = visualSpeed.ToString("F0") + "KM/H";
+
 			VisualizeWheel(truck_Info);
+			HandleGears(visualSpeed);
 		}
 	}
 }
