@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 133ea1caccadba94fbb5b1ff96532f55
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 195642
+  packageName: Low Poly Tools Bundle
+  packageVersion: 1.4
+  assetPath: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Shaders/BuiltinRP/RiverBRP.shader
+  uploadId: 651480

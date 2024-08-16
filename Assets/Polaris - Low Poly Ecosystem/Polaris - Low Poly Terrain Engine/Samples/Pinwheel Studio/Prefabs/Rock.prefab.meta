@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2b48895e6ddc0e4409b245952f9896d4
+timeCreated: 1531126792
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 195642
+  packageName: Low Poly Tools Bundle
+  packageVersion: 1.4
+  assetPath: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel
+    Studio/Prefabs/Rock.prefab
+  uploadId: 651480

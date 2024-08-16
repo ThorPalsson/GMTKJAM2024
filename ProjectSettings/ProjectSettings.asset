@@ -814,7 +814,8 @@ PlayerSettings:
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   webWasm2023: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: POSEIDON;POSEIDON_URP;JUPITER;TEXTURE_GRAPH;GRIFFIN_EDITOR_COROUTINES;TG_SEARCHER;GRIFFIN;GRIFFIN_2021;GRIFFIN_URP
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

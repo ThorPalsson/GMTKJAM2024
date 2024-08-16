@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1d5951a2a69fd634bab222c0c5ac3eaa
+timeCreated: 1526371049
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 195642
+  packageName: Low Poly Tools Bundle
+  packageVersion: 1.4
+  assetPath: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel
+    Studio/Materials/Snowman.mat
+  uploadId: 651480

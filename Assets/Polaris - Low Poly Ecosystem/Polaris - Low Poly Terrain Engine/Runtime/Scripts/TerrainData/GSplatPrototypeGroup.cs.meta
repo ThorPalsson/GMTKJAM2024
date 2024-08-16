@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8838f9e3fa4281f48a9a64c787c84798
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: b6b0facc21280084a9353d66d8faa793, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 195642
+  packageName: Low Poly Tools Bundle
+  packageVersion: 1.4
+  assetPath: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Scripts/TerrainData/GSplatPrototypeGroup.cs
+  uploadId: 651480

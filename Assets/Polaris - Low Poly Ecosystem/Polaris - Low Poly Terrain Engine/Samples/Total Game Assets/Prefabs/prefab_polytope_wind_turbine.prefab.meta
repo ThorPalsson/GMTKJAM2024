@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8076c64c27533d64eb3b5ca28b94e190
+timeCreated: 1522083576
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 195642
+  packageName: Low Poly Tools Bundle
+  packageVersion: 1.4
+  assetPath: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Total
+    Game Assets/Prefabs/prefab_polytope_wind_turbine.prefab
+  uploadId: 651480

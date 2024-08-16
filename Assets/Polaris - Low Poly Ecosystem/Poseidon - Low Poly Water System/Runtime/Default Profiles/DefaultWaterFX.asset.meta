@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f1d83cf35f8dbbf479973ace18485d0d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 195642
+  packageName: Low Poly Tools Bundle
+  packageVersion: 1.4
+  assetPath: Assets/Polaris - Low Poly Ecosystem/Poseidon - Low Poly Water System/Runtime/Default
+    Profiles/DefaultWaterFX.asset
+  uploadId: 651480

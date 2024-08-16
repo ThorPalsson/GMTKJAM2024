@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8aa3174ecec0a6b47ae7e9a7fe06f455
+timeCreated: 1525856835
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 195642
+  packageName: Low Poly Tools Bundle
+  packageVersion: 1.4
+  assetPath: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Samples/Pinwheel
+    Studio/Prefabs/GodRay.prefab
+  uploadId: 651480
