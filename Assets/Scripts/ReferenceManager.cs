@@ -4,6 +4,7 @@ public class ReferenceManager : MonoBehaviour
 {
    public static ReferenceManager Instance; 
    public GameManager gameManager;
+   public UiManager uiManager; 
    public TruckController Truck; 
    public Transform CameraTransform;
    public CameraFollow Camera;

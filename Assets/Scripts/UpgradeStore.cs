@@ -31,7 +31,7 @@ public class UpgradeStore : MonoBehaviour
             uiItem.costText.text = upgrades[i].ItemCost.ToString() + "$";
             uiItem.itemImage.sprite = upgrades[i].ItemImage;
 
-            ConnectUpgradeToButton(uiItem.purchaseButton, upgrades[i].Type);
+            ConnectUpgradeToButton(uiItem.purchaseButton, upgrades[i].Type, upgrades[i].ItemCost);
         }
     }
 
@@ -41,23 +41,61 @@ public class UpgradeStore : MonoBehaviour
     }
 
 
-    private void ConnectUpgradeToButton(Button b, UpgradeItem.UpgradeType type)
+    private void ConnectUpgradeToButton(Button b, UpgradeItem.UpgradeType type, int price)
     {
         var truck = ReferenceManager.Instance.Truck; 
+
+
         switch(type)
         {
             case UpgradeItem.UpgradeType.EnginePower:
-                b.onClick.AddListener(() => truck.AddPower());
+                b.onClick.AddListener(() => TryBuyPower(truck, price));
                 break;
             case UpgradeItem.UpgradeType.BrakePower:
-                b.onClick.AddListener(() => truck.AddBreaks());
+                b.onClick.AddListener(() => TryBuyBrakes(truck, price));
                 break;
             case UpgradeItem.UpgradeType.Nitro:
-                b.onClick.AddListener(() => truck.NitroUpgrade());
+                b.onClick.AddListener(() => TryBuyBoost(truck, price));
                 break;
         }
 
         b.onClick.AddListener(() => ClosePanel());
+    }
+
+
+    private void TryBuyPower(TruckController truck, int price)
+    {
+        if (!TryPurchase(price)) return;
+        truck.AddPower();
+    }
+
+    private void TryBuyBrakes(TruckController truck, int price)
+    {
+        if (!TryPurchase(price)) return;
+        truck.AddBreaks();
+    }
+
+    private void TryBuyBoost(TruckController truck, int price)
+    {
+        if (!TryPurchase(price)) return; 
+        truck.NitroUpgrade();
+    }
+
+
+    private bool TryPurchase(int price)
+    {
+        var cash = ReferenceManager.Instance.gameManager.Money; 
+        if(cash >= price)
+        {
+            ReferenceManager.Instance.gameManager.RemoveMoney(price);
+            return true;
+        }
+
+
+        print ("Too pooor!"); 
+        return false;
+
+
 
     }
 }

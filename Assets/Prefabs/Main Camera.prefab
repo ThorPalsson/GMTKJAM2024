@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8370884043213751691}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21113251, y: -0, z: -0, w: 0.97745746}
+  m_LocalRotation: {x: 0.2111286, y: 0, z: 0, w: 0.97745836}
   m_LocalPosition: {x: 445.61414, y: 10.84, z: 121.09999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -152,5 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   offset: {x: 0, y: 4, z: -8}
-  smoothSpeed: 0.005
+  smoothSpeed: 0.1
   FollowCar: 1
+  Position: {x: 0, y: 0, z: 0}

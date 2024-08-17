@@ -131,7 +131,11 @@ public class TruckController : MonoBehaviour
 	public void ParkCar()
 	{
 		canDrive = false;
-		rb.isKinematic = true;
+	}
+
+	public void UnParkCar()
+	{
+		canDrive = true;
 	}
 
 
@@ -154,6 +158,12 @@ public class TruckController : MonoBehaviour
 	{
 		if (!canDrive)
 		{
+			foreach (Dot_Truck truck_Info in truck_Infos)
+			{
+
+				truck_Info.leftWheel.brakeTorque = maxBreakPower;
+				truck_Info.rightWheel.brakeTorque = maxBreakPower;
+			}
 			return; 
 		}
 

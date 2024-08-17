@@ -43,7 +43,7 @@ public class Outpost : MonoBehaviour
 
     public void ParkCar(Cargo[] cargos)
     {
-        truck.canDrive = false;
+        truck.ParkCar();
         int values = 0;
 
         foreach (var c in cargos)
@@ -86,7 +86,7 @@ public class Outpost : MonoBehaviour
 
     private void LeaveTown()
     {
-        truck.canDrive = true;
+        truck.UnParkCar();
         ToggleUI(false);
         CameraToCar();
            

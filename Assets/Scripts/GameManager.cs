@@ -11,6 +11,13 @@ public class GameManager : MonoBehaviour
    public void AddMoney(int value)
    {
         Money += value;
+        ReferenceManager.Instance.uiManager.ChangeMoneyText(Money);
+   }
+
+   public void RemoveMoney(int value)
+   {
+        Money -= value; 
+        ReferenceManager.Instance.uiManager.ChangeMoneyText(Money);
    }
 
 

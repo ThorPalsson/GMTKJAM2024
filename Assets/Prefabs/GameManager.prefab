@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de0db33461fd1b4f9fbf04fa8f25728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 9164501069300928761}
   Truck: {fileID: 0}
   CameraTransform: {fileID: 0}
   Camera: {fileID: 0}
@@ -61,3 +62,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc5e89fe089a834d903d39742dd4da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Money: 0
+  Upgrades:
+  - ItemName: More Power
+    ItemCost: 20
+    ItemImage: {fileID: 21300000, guid: 3f75184d321990942a27a7b5900b8c1c, type: 3}
+    Type: 0
+  - ItemName: Better Brakes
+    ItemCost: 10
+    ItemImage: {fileID: 21300000, guid: 3b33e10fd57ee18419bb55a6cd501662, type: 3}
+    Type: 1
+  - ItemName: Nitro
+    ItemCost: 30
+    ItemImage: {fileID: 21300000, guid: cb947969c12ba8445abc96a09ad49b9e, type: 3}
+    Type: 2
