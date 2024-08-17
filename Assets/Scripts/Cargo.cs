@@ -7,6 +7,8 @@ public class Cargo : MonoBehaviour
     [SerializeField] private GameObject fallenEffect;
     public int cargoValue = 1;
 
+    [SerializeField] private bool useFallEffect = true;
+
 
     private void OnCollisionEnter(Collision other) {
         if (!HasFallen) return;
@@ -20,7 +22,9 @@ public class Cargo : MonoBehaviour
 
     public void DestroyCargo(bool money = false)
     {
-        Instantiate(fallenEffect, transform.position, Quaternion.identity);
+        if (useFallEffect)
+            Instantiate(fallenEffect, transform.position, Quaternion.identity);
+
         Destroy(this.gameObject);
     }
 }
