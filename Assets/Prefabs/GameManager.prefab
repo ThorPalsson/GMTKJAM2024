@@ -98,15 +98,15 @@ MonoBehaviour:
   - CargoName: Bananas
     CargoWorth: 1450
     CargoImage: {fileID: 21300000, guid: 0aa740d84f1aeef4cb3db16f3f30f5f7, type: 3}
-    CargoObject: {fileID: 2400608624617441557, guid: 6ff00b8c6a7eaa240989b3f6cc6bbfb8, type: 3}
+    CargoObject: {fileID: 3847264649432036791, guid: cafd06cc22cfe744a8a480146873afac, type: 3}
   - CargoName: Many Bananas
     CargoWorth: 4250
-    CargoImage: {fileID: 21300000, guid: f2ced2b405148ee46b7fdd4a2a26cd8a, type: 3}
-    CargoObject: {fileID: 2400608624617441557, guid: 6ff00b8c6a7eaa240989b3f6cc6bbfb8, type: 3}
-  - CargoName: Many Packages
+    CargoImage: {fileID: 21300000, guid: e395897bbbf35c64781eea3964605e04, type: 3}
+    CargoObject: {fileID: 8996600593067277562, guid: d61a8c64af4c82840bd42c1a56ee14a2, type: 3}
+  - CargoName: So Many Bananas!
     CargoWorth: 8500
-    CargoImage: {fileID: 21300000, guid: f2ced2b405148ee46b7fdd4a2a26cd8a, type: 3}
-    CargoObject: {fileID: 2400608624617441557, guid: 6ff00b8c6a7eaa240989b3f6cc6bbfb8, type: 3}
+    CargoImage: {fileID: 21300000, guid: c7f0d39eaf83a214ca554b2283b53071, type: 3}
+    CargoObject: {fileID: 3635923278336177091, guid: d46cc5e3b0508784e9c3ebcf054c02b4, type: 3}
 --- !u!114 &4545325686633364767
 MonoBehaviour:
   m_ObjectHideFlags: 0

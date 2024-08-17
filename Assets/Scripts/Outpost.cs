@@ -24,6 +24,8 @@ public class Outpost : MonoBehaviour
 
 
     [SerializeField] private bool hasTakenCargo; 
+    [SerializeField] private bool hasBroughtCargo; 
+
 
     
     void Start()
@@ -47,10 +49,14 @@ public class Outpost : MonoBehaviour
         truck.ParkCar();
         int values = 0;
 
-        foreach (var c in cargos)
+        if (!hasBroughtCargo)
         {
-            values += c.cargoValue; 
-            c.DestroyCargo(true);
+            foreach (var c in cargos)
+            {
+                values += c.cargoValue; 
+                c.DestroyCargo(true);
+            }
+            hasBroughtCargo = true;
         }
 
         print($"Brought {values}$ worth of cargo");

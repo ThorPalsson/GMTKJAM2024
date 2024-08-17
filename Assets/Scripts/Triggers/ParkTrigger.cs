@@ -17,7 +17,7 @@ public class ParkTrigger : MonoBehaviour
         if (other.transform.CompareTag("Wheels"))
         {
             wheelAmount++; 
-            print ($"Wheel nr {wheelAmount} added");
+        //    print ($"Wheel nr {wheelAmount} added");
         }
     }
 
@@ -25,7 +25,12 @@ public class ParkTrigger : MonoBehaviour
         if (other.transform.CompareTag("Wheels"))
         {
             wheelAmount --; 
-            print ($"Wheel nr {wheelAmount} removed");
+          //  print ($"Wheel nr {wheelAmount} removed");
+        }
+
+        if (other.CompareTag("Car") && truck.ComingFromRespawn)
+        {
+            truck.ComingFromRespawn = false;
         }
     }
 
@@ -38,15 +43,14 @@ public class ParkTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isParked && wheelAmount != 4)
+        if (isParked && wheelAmount == 0)
         {
             isParked = false;
         }
 
-        if (wheelAmount == 4 && !isParked)
+        if (wheelAmount == 4 && !isParked && !truck.ComingFromRespawn)
         {
             var isStop = truck.Speed < parkingSpeed;
-
             if (isStop)
             {
                 StartParking();

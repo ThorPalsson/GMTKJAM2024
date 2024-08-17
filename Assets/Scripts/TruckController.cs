@@ -39,7 +39,7 @@ public class TruckController : MonoBehaviour
 	[SerializeField] private TMP_Text speedometerText;
 	[SerializeField] private TMP_Text gearText;
 	private float tiltLimitHigh;
-	private Rigidbody rb;
+	public Rigidbody rb;
 	[SerializeField] private float visualSpeedModifier = 4;
 
 	private int currentGear; 
@@ -62,6 +62,8 @@ public class TruckController : MonoBehaviour
 
 
 	[SerializeField] private Transform CargoPoint; 
+
+	public bool ComingFromRespawn; 
 
 
 	public float Speed;
