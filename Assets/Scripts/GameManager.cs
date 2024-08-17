@@ -82,10 +82,41 @@ public class GameManager : MonoBehaviour
         }
     }
 
-   public void StoreTruck(GameObject cargo)
+    public void StoreTruckLocation (Transform location, bool alsoTeleport = false)
+    {
+        savePosition = location.position; 
+        saveRotation = location.rotation;
+
+        if (alsoTeleport)
+        {
+            ResetOnlyTruckLocation();
+        }
+    }
+
+    private void ResetOnlyTruckLocation()
+    {
+        truck.ComingFromRespawn = true;
+        truck.transform.position = savePosition; 
+        truck.transform.rotation = saveRotation; 
+    }
+
+    public void StoreCargo(GameObject cargo)
+    {
+        savedCargo = cargo; 
+    }
+
+   public void StoreTruck(GameObject cargo, Transform location = null)
    {
-        savePosition = truck.transform.position;
-        saveRotation = truck.transform.rotation; 
+        if(location == null)
+        {
+            savePosition = truck.transform.position;
+            saveRotation = truck.transform.rotation; 
+        } else 
+        {
+            savePosition = location.position; 
+            saveRotation = location.rotation;
+        }
+
         savedCargo = cargo; 
    }
 

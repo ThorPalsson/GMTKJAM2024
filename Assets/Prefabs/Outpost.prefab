@@ -498,6 +498,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &3079922925098360072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3572441898959407481}
+  m_Layer: 0
+  m_Name: CarRespawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3572441898959407481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3079922925098360072}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 2.23, y: 2.1, z: 0.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7390450332831481248}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &3391090996888333994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,6 +2050,9 @@ MonoBehaviour:
   camearRotationSpeed: 10
   leaveOutpost: {fileID: 0}
   CargoPanel: {fileID: 0}
+  hasTakenCargo: 0
+  hasBroughtCargo: 0
+  truckRespawn: {fileID: 3572441898959407481}
 --- !u!1 &8391401059474758690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2463,7 @@ Transform:
   - {fileID: 5759336797667023213}
   - {fileID: 6520323411900849390}
   - {fileID: 6928987217262930144}
+  - {fileID: 3572441898959407481}
   m_Father: {fileID: 3249187388039776702}
   m_LocalEulerAnglesHint: {x: 0, y: 117.241, z: 0}
 --- !u!1001 &924092720345619350

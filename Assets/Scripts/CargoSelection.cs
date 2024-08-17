@@ -40,7 +40,7 @@ public class CargoSelection : MonoBehaviour
     {
         var items = ReferenceManager.Instance.gameManager.GetCargo();
 
-        for (int i = 0; i < items.Length; i++)
+        for (int i = 0; i < uiItems.Length; i++)
         {
             var uiItem = uiItems[i]; 
 
@@ -51,7 +51,6 @@ public class CargoSelection : MonoBehaviour
             uiItem.selectionButton.onClick.RemoveAllListeners();
 
             ConnectSelectionButton(uiItem.selectionButton, items[i].CargoObject);
-
         }
     }
 
@@ -64,7 +63,7 @@ public class CargoSelection : MonoBehaviour
     private void ClosePanel(GameObject g)
     {
         Time.timeScale = 1;
-        ReferenceManager.Instance.gameManager.StoreTruck(g);
+        ReferenceManager.Instance.gameManager.StoreCargo(g);
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

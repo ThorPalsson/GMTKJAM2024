@@ -26,6 +26,8 @@ public class Outpost : MonoBehaviour
     [SerializeField] private bool hasTakenCargo; 
     [SerializeField] private bool hasBroughtCargo; 
 
+    [SerializeField] private Transform truckRespawn; 
+
 
     
     void Start()
@@ -61,7 +63,7 @@ public class Outpost : MonoBehaviour
 
         print($"Brought {values}$ worth of cargo");
 
-        leaveOutpost.onClick.AddListener(() => LeaveTown());
+        leaveOutpost.onClick.AddListener(() => LeaveOutpost());
         ReferenceManager.Instance.gameManager.AddMoney(values);
         movingCamera = true;
     }
@@ -82,7 +84,6 @@ public class Outpost : MonoBehaviour
             movingCamera = false;
             ToggleUI(true);
         }
-
     }
 
     private void CameraToCar()
@@ -96,15 +97,18 @@ public class Outpost : MonoBehaviour
         }
     }
 
-    private void LeaveTown()
+    private void LeaveOutpost()
     {
+        var manager = ReferenceManager.Instance.gameManager; 
+        manager.StoreTruckLocation(truckRespawn, true); 
+
         if (!hasTakenCargo)
         {
             CargoPanel.SetActive(true);
             hasTakenCargo = true;
             Time.timeScale = 0; 
         }
-        
+
         truck.UnParkCar();
         ToggleUI(false);
         CameraToCar();
