@@ -9,11 +9,23 @@ public class CameraFollow : MonoBehaviour
 
     public bool FollowCar = true;
 
-    void LateUpdate()
+    public Vector3 Position; 
+
+    private float yOffsetLimit = .3f;   
+
+    void FixedUpdate()
     {
+
+        Position = transform.position;
         if (!FollowCar) return;
 
         Vector3 desiredPosition = target.position + target.TransformDirection(offset);
+
+        if (Mathf.Abs(desiredPosition.y - transform.position.y ) < yOffsetLimit)
+        {
+            desiredPosition = new Vector3(desiredPosition.x, transform.position.y, desiredPosition.z);
+        }
+
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
 
         transform.position = smoothedPosition;
