@@ -1,4 +1,6 @@
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Outpost : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class Outpost : MonoBehaviour
     private bool movingCamera;
     private Transform cameraTransform;
 
+    [SerializeField] private GameObject[] houseUi; 
+
 
     [Header("Camera Movement")]
     [SerializeField] private float cameraMoveSpeed;
@@ -14,12 +18,19 @@ public class Outpost : MonoBehaviour
 
     private CameraFollow truckCamera;
 
+    private TruckController truck;
+
+    [SerializeField] private Button leaveOutpost;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cameraTransform = ReferenceManager.Instance.CameraTransform;
         truckCamera = ReferenceManager.Instance.Camera;
+        truck = ReferenceManager.Instance.Truck;
+
+        leaveOutpost.onClick.AddListener(() => LeaveTown());
     }
 
     // Update is called once per frame
@@ -32,9 +43,7 @@ public class Outpost : MonoBehaviour
 
     public void ParkCar(Cargo[] cargos)
     {
-        var truck = ReferenceManager.Instance.Truck;
         truck.canDrive = false;
-
         int values = 0;
 
         foreach (var c in cargos)
@@ -45,6 +54,7 @@ public class Outpost : MonoBehaviour
 
         print($"Brough {values} of cargo");
 
+        ReferenceManager.Instance.gameManager.AddMoney(values);
         movingCamera = true;
     }
 
@@ -61,10 +71,10 @@ public class Outpost : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None; 
             movingCamera = false;
+            ToggleUI(true);
         }
 
     }
-
 
     private void CameraToCar()
     {
@@ -73,4 +83,23 @@ public class Outpost : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    private void LeaveTown()
+    {
+        truck.canDrive = true;
+        ToggleUI(false);
+        CameraToCar();
+           
+    }
+
+    private void ToggleUI(bool value)
+    {
+        leaveOutpost.gameObject.SetActive(value);
+
+        foreach(var h in houseUi)
+        {
+            h.SetActive(value);
+        }
+    }
+
 }

@@ -22,8 +22,12 @@ public class TruckController : MonoBehaviour
 {
 
 	public bool canDrive; 
-
 	public float maxMotorTorque;
+	[Range(1,2)]
+	public float motorTorqueUpgrade = 1.1f;
+	public float maxBreakPower = 850;
+	[Range(1,2)]
+	public float breakPowerUpgrade = 1.5f;
 	public float maxSteeringAngle;
 	public List<Dot_Truck> truck_Infos;
     [SerializeField] private float maxThrottleSpeed = 10;	
@@ -43,9 +47,12 @@ public class TruckController : MonoBehaviour
 
 	[SerializeField] private bool atThrottleLimit;
 
-	[SerializeField] private float boosPower = 200;
+	[SerializeField] private float boostPower = 200;
+	[Range(1,2)]public float BoostPowerUpgrades = 1.2f;
 
     [SerializeField] private GameObject boostVFX; 
+
+	[SerializeField] private bool hasNitro; 
 
 
 	public float Speed;
@@ -59,7 +66,6 @@ public class TruckController : MonoBehaviour
 
 		currentGear = 1; 
 		gearText.text = "1";
-
 
 		for (int i = 0; i < Speeds.Length; i++)
 		{
@@ -141,14 +147,11 @@ public class TruckController : MonoBehaviour
 			gearText.text = newGear.ToString();
 		else 
 			gearText.text = "R";
-
-		
 	}
 
 
 	public void Update()
 	{
-
 		if (!canDrive)
 		{
 			return; 
@@ -160,9 +163,9 @@ public class TruckController : MonoBehaviour
 		}
 
 
-		if (Input.GetKey(KeyCode.LeftShift))
+		if (hasNitro && Input.GetKey(KeyCode.LeftShift))
 		{
-			rb.AddForce(transform.forward * boosPower); 
+			rb.AddForce(transform.forward * boostPower); 
 			boostVFX.SetActive(true);
 		} else if (boostVFX.activeSelf)
 		{
@@ -174,7 +177,7 @@ public class TruckController : MonoBehaviour
 		float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 		float brakeTorque = Mathf.Abs(Input.GetAxis("Jump"));
 		if (brakeTorque > 0.001) {
-			brakeTorque = maxMotorTorque;
+			brakeTorque = maxBreakPower;
 			motor = 0;
 		} else {
 			brakeTorque = 0;
@@ -218,5 +221,26 @@ public class TruckController : MonoBehaviour
 
 			VisualizeWheel(truck_Info);
 		}
+	}
+
+	public void AddPower()
+	{
+		maxMotorTorque *= motorTorqueUpgrade; 
+	}
+
+	public void AddBreaks()
+	{
+		maxBreakPower *= breakPowerUpgrade; 
+	}
+
+	public void NitroUpgrade()
+	{
+		if (!hasNitro)
+		{
+			hasNitro = true;
+			return;
+		}
+
+		boostPower *= BoostPowerUpgrades;
 	}
 }

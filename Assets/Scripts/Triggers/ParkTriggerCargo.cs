@@ -16,6 +16,7 @@ public class ParkTriggerCargo : MonoBehaviour
             cargoList.Add(newCargo);
         }
 
+        cargo.Clear();
         return cargoList.ToArray();
 
    }
