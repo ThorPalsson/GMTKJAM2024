@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
    public int Money; 
    public UpgradeItem[] Upgrades;
+   public CargoTypes[] CargoTypes;
 
    public void AddMoney(int value)
    {
@@ -32,6 +33,22 @@ public class GameManager : MonoBehaviour
 
         return list.ToArray();
    }
+
+      public CargoTypes[] GetCargo()
+   {
+        var list = CargoTypes.ToList();
+
+        while(list.Count > 3)
+        {
+            list.Remove(list[UnityEngine.Random.Range(0, list.Count)]); 
+        }
+
+        return list.ToArray();
+   }
+   public void StoreTruck(GameObject cargo)
+   {
+
+   }
    
 }
 
@@ -48,7 +65,18 @@ public class UpgradeItem
         EnginePower,
         BrakePower,
         Nitro, 
+        Gearbox,
     }
 
     public UpgradeType Type;
+}
+
+
+[Serializable]
+public class CargoTypes
+{
+    public string CargoName; 
+    public int CargoWorth; 
+    public Sprite CargoImage; 
+    public GameObject CargoObject; 
 }

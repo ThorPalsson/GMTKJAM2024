@@ -22,6 +22,8 @@ public class TruckController : MonoBehaviour
 {
 
 	public bool canDrive; 
+	[SerializeField] private bool useDownwardsForce;
+	[SerializeField] private float downwardsForceMultiplier = 4;
 	public float maxMotorTorque;
 	[Range(1,2)]
 	public float motorTorqueUpgrade = 1.1f;
@@ -32,6 +34,7 @@ public class TruckController : MonoBehaviour
 	public List<Dot_Truck> truck_Infos;
     [SerializeField] private float maxThrottleSpeed = 10;	
 	[SerializeField] private bool useTiltLimits;
+	[SerializeField] private float stallDeceleration = 200; 
 	[SerializeField] private float tiltLimit = 126f;
 	[SerializeField] private TMP_Text speedometerText;
 	[SerializeField] private TMP_Text gearText;
@@ -42,7 +45,9 @@ public class TruckController : MonoBehaviour
 	private int currentGear; 
 	public Dictionary<int, float> Gears = new Dictionary<int, float>();
 	public int[] Speeds; 
-	private float gearTimer = .2f; 
+	private float gearTimer = .5f; 
+	private int gearUpgrades; 
+	[SerializeField] private float gearBoost = 0; 
 	private bool isChangingGear;
 
 	[SerializeField] private bool atThrottleLimit;
@@ -51,8 +56,12 @@ public class TruckController : MonoBehaviour
 	[Range(1,2)]public float BoostPowerUpgrades = 1.2f;
 
     [SerializeField] private GameObject boostVFX; 
+	[SerializeField] private GameObject gearVFX; 
 
 	[SerializeField] private bool hasNitro; 
+
+
+	[SerializeField] private Transform CargoPoint; 
 
 
 	public float Speed;
@@ -144,13 +153,27 @@ public class TruckController : MonoBehaviour
 		isChangingGear = true;
 		yield return new WaitForSeconds(gearTimer);
 
+
 		currentGear = newGear;
-		isChangingGear = false;
 
 		if (newGear != -1)
 			gearText.text = newGear.ToString();
 		else 
 			gearText.text = "R";
+
+
+		isChangingGear = false;
+
+		if (gearBoost != 0)
+		{
+			rb.AddForce(transform.forward * gearBoost);
+
+			gearVFX.SetActive(true); 
+			yield return new WaitForSeconds(.1f);
+			gearVFX.SetActive(false);
+		}
+
+
 	}
 
 
@@ -165,6 +188,11 @@ public class TruckController : MonoBehaviour
 				truck_Info.rightWheel.brakeTorque = maxBreakPower;
 			}
 			return; 
+		}
+
+		if (useDownwardsForce)
+		{
+			rb.AddForce(transform.up * - (Speed * downwardsForceMultiplier));
 		}
 
 		if (useTiltLimits)
@@ -194,7 +222,7 @@ public class TruckController : MonoBehaviour
 		}
 
 		if (input == 0) {
-			brakeTorque = maxMotorTorque / 1.2f; 
+			brakeTorque = stallDeceleration; 
 		}
 
 		Speed = rb.linearVelocity.magnitude;
@@ -236,6 +264,7 @@ public class TruckController : MonoBehaviour
 	public void AddPower()
 	{
 		maxMotorTorque *= motorTorqueUpgrade; 
+		maxThrottleSpeed += 5;
 	}
 
 	public void AddBreaks()
@@ -253,4 +282,38 @@ public class TruckController : MonoBehaviour
 
 		boostPower *= BoostPowerUpgrades;
 	}
+
+	public void UpdateGearBox()
+	{
+		gearUpgrades ++; 
+
+
+		switch (gearUpgrades)
+		{
+			case 1: 
+				gearTimer  = .3f; 
+				break;
+			case 2:
+				gearTimer = .2f;
+				gearBoost = 200; 
+				break;
+			case 3:
+				gearTimer = .1f;
+				gearBoost += 200; 
+				break;
+			case 4: 
+				gearTimer = .05f; 
+				gearBoost += 500;
+				break;
+			default:
+				gearBoost += 500; 
+				break;
+		}
+	}
+
+	public void AddCargo(GameObject newCargo)
+	{
+		Instantiate(newCargo, CargoPoint.position, CargoPoint.rotation);
+	}
+
 }

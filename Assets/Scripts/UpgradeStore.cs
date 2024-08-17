@@ -17,12 +17,13 @@ public class UpgradeStore : MonoBehaviour
     }
     public UiItem[] UiItems;
 
+    private void Start() {
+        RollItems();
+    }
 
-    private void Start()
+    private void RollItems()
     {
         upgrades = ReferenceManager.Instance.gameManager.GetItems();
-
-
         for (int i = 0; i < upgrades.Length; i++)
         {
             var uiItem = UiItems[i]; 
@@ -31,7 +32,8 @@ public class UpgradeStore : MonoBehaviour
             uiItem.costText.text = upgrades[i].ItemCost.ToString() + "$";
             uiItem.itemImage.sprite = upgrades[i].ItemImage;
 
-            ConnectUpgradeToButton(uiItem.purchaseButton, upgrades[i].Type, upgrades[i].ItemCost);
+            uiItem.purchaseButton.onClick.RemoveAllListeners();
+            ConnectUpgradeToButton(uiItem.purchaseButton, upgrades[i].Type, upgrades[i]);
         }
     }
 
@@ -41,61 +43,70 @@ public class UpgradeStore : MonoBehaviour
     }
 
 
-    private void ConnectUpgradeToButton(Button b, UpgradeItem.UpgradeType type, int price)
+    private void ConnectUpgradeToButton(Button b, UpgradeItem.UpgradeType type, UpgradeItem item)
     {
         var truck = ReferenceManager.Instance.Truck; 
-
 
         switch(type)
         {
             case UpgradeItem.UpgradeType.EnginePower:
-                b.onClick.AddListener(() => TryBuyPower(truck, price));
+                b.onClick.AddListener(() => TryBuyPower(truck, item));
                 break;
             case UpgradeItem.UpgradeType.BrakePower:
-                b.onClick.AddListener(() => TryBuyBrakes(truck, price));
+                b.onClick.AddListener(() => TryBuyBrakes(truck, item));
                 break;
             case UpgradeItem.UpgradeType.Nitro:
-                b.onClick.AddListener(() => TryBuyBoost(truck, price));
+                b.onClick.AddListener(() => TryBuyBoost(truck, item));
+                break;
+            case UpgradeItem.UpgradeType.Gearbox:
+                b.onClick.AddListener(() => TryBuyGearBox(truck, item));
                 break;
         }
 
-        b.onClick.AddListener(() => ClosePanel());
+        b.onClick.AddListener(() => RollItems());
+
     }
 
 
-    private void TryBuyPower(TruckController truck, int price)
+    private void TryBuyPower(TruckController truck, UpgradeItem item)
     {
-        if (!TryPurchase(price)) return;
+        print ("Trying to buy power");
+        if (!TryPurchase(item)) return;
         truck.AddPower();
+
     }
 
-    private void TryBuyBrakes(TruckController truck, int price)
+    private void TryBuyBrakes(TruckController truck, UpgradeItem item)
     {
-        if (!TryPurchase(price)) return;
+        if (!TryPurchase(item)) return;
         truck.AddBreaks();
     }
 
-    private void TryBuyBoost(TruckController truck, int price)
+    private void TryBuyBoost(TruckController truck, UpgradeItem item)
     {
-        if (!TryPurchase(price)) return; 
+        if (!TryPurchase(item)) return; 
         truck.NitroUpgrade();
     }
 
+    private void TryBuyGearBox(TruckController truck, UpgradeItem item)
+    {
+        if (!TryPurchase(item)) return;
+        truck.UpdateGearBox();
+    }
 
-    private bool TryPurchase(int price)
+
+    private bool TryPurchase(UpgradeItem item)
     {
         var cash = ReferenceManager.Instance.gameManager.Money; 
-        if(cash >= price)
+        if(cash >= item.ItemCost)
         {
-            ReferenceManager.Instance.gameManager.RemoveMoney(price);
+            ReferenceManager.Instance.gameManager.RemoveMoney(item.ItemCost);
+            float f = item.ItemCost; 
+            item.ItemCost = Mathf.RoundToInt(f *= 1.2f);    
             return true;
         }
 
-
         print ("Too pooor!"); 
         return false;
-
-
-
     }
 }

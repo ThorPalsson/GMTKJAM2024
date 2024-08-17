@@ -12,6 +12,7 @@ public class ParkTriggerCargo : MonoBehaviour
 
         foreach (var c in cargo)
         {
+            if (c == null) continue;
             var newCargo = c.GetComponent<Cargo>();
             cargoList.Add(newCargo);
         }

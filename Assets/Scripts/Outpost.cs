@@ -10,8 +10,6 @@ public class Outpost : MonoBehaviour
     private Transform cameraTransform;
 
     [SerializeField] private GameObject[] houseUi; 
-
-
     [Header("Camera Movement")]
     [SerializeField] private float cameraMoveSpeed;
     [SerializeField] private float camearRotationSpeed;
@@ -21,6 +19,10 @@ public class Outpost : MonoBehaviour
     private TruckController truck;
 
     [SerializeField] private Button leaveOutpost;
+    [SerializeField] private GameObject CargoPanel;
+
+
+    private bool hasTakenCargo; 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -86,9 +88,17 @@ public class Outpost : MonoBehaviour
 
     private void LeaveTown()
     {
+        if (!hasTakenCargo)
+        {
+            CargoPanel.SetActive(true);
+            hasTakenCargo = true;
+        }
+        
         truck.UnParkCar();
         ToggleUI(false);
         CameraToCar();
+
+        Time.timeScale = 0; 
            
     }
 
