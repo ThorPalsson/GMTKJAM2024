@@ -68,7 +68,6 @@ public class CargoSelection : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-
         gameObject.SetActive(false);
     }
 }

@@ -69,19 +69,33 @@ MonoBehaviour:
   - ItemName: More Power
     ItemCost: 200
     ItemImage: {fileID: 21300000, guid: 3f75184d321990942a27a7b5900b8c1c, type: 3}
+    OneTimeUse: 0
+    Used: 0
     Type: 0
   - ItemName: Better Brakes
     ItemCost: 100
     ItemImage: {fileID: 21300000, guid: 3b33e10fd57ee18419bb55a6cd501662, type: 3}
+    OneTimeUse: 0
+    Used: 0
     Type: 1
   - ItemName: Nitro
     ItemCost: 300
     ItemImage: {fileID: 21300000, guid: cb947969c12ba8445abc96a09ad49b9e, type: 3}
+    OneTimeUse: 0
+    Used: 0
     Type: 2
   - ItemName: Gearbox
     ItemCost: 400
     ItemImage: {fileID: 21300000, guid: 07eeef3511179ba4cb1b68f9f30da79a, type: 3}
+    OneTimeUse: 0
+    Used: 0
     Type: 3
+  - ItemName: Back Bar
+    ItemCost: 500
+    ItemImage: {fileID: 21300000, guid: a3885d85eb1844047a6a2b84a61c552f, type: 3}
+    OneTimeUse: 1
+    Used: 0
+    Type: 4
   CargoTypes:
   - CargoName: Few Packages
     CargoWorth: 600
@@ -107,6 +121,7 @@ MonoBehaviour:
     CargoWorth: 8500
     CargoImage: {fileID: 21300000, guid: c7f0d39eaf83a214ca554b2283b53071, type: 3}
     CargoObject: {fileID: 3635923278336177091, guid: d46cc5e3b0508784e9c3ebcf054c02b4, type: 3}
+  savedCargo: {fileID: 0}
 --- !u!114 &4545325686633364767
 MonoBehaviour:
   m_ObjectHideFlags: 0

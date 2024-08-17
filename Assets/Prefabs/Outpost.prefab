@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 9189690386686627239}
   - component: {fileID: 5714949441715417140}
   m_Layer: 0
-  m_Name: HouseCanvas (1)
+  m_Name: TruckStopCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 6399399278159639534}
   - component: {fileID: 2338486921538190319}
   m_Layer: 0
-  m_Name: HouseCanvas (3)
+  m_Name: AutoShopCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,7 +1766,7 @@ GameObject:
   - component: {fileID: 6797196855824958755}
   - component: {fileID: 581439817447084709}
   m_Layer: 0
-  m_Name: HouseCanvas (2)
+  m_Name: JonathanHouseCanavs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -46,6 +46,14 @@ public class GameManager : MonoBehaviour
         ShuffleList(list); 
         var returnList = new List<UpgradeItem>();
 
+        for(int i = 0; i < list.Count; i++)
+        {
+            if (list[i].OneTimeUse && list[i].Used)
+            {
+                list.Remove(list[i]);
+            }
+        }
+
         for(int i = 0; i < 3; i++)
         {
             returnList.Add(list[i]); 
@@ -140,7 +148,8 @@ public class UpgradeItem
     public string ItemName;
     public int ItemCost;
     public Sprite ItemImage; 
-
+    public bool OneTimeUse = false;
+    public bool Used = false;
 
     public enum UpgradeType
     {
@@ -148,6 +157,7 @@ public class UpgradeItem
         BrakePower,
         Nitro, 
         Gearbox,
+        BackBar, 
     }
 
     public UpgradeType Type;

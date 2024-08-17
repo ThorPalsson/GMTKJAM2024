@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UpgradeStore : MonoBehaviour
 {
-    public UpgradeItem[] upgrades; 
+    //public UpgradeItem[] upgrades; 
 
     [Serializable]
     public struct UiItem
@@ -23,8 +23,8 @@ public class UpgradeStore : MonoBehaviour
 
     private void RollItems()
     {
-        upgrades = ReferenceManager.Instance.gameManager.GetItems();
-        for (int i = 0; i < upgrades.Length; i++)
+        var upgrades = ReferenceManager.Instance.gameManager.GetItems();
+        for (int i = 0; i < UiItems.Length; i++)
         {
             var uiItem = UiItems[i]; 
 
@@ -61,6 +61,9 @@ public class UpgradeStore : MonoBehaviour
             case UpgradeItem.UpgradeType.Gearbox:
                 b.onClick.AddListener(() => TryBuyGearBox(truck, item));
                 break;
+            case UpgradeItem.UpgradeType.BackBar:
+                b.onClick.AddListener(() => TryBuyBackBar(truck, item));
+                break;
         }
 
         b.onClick.AddListener(() => RollItems());
@@ -94,6 +97,12 @@ public class UpgradeStore : MonoBehaviour
         truck.UpdateGearBox();
     }
 
+    private void TryBuyBackBar(TruckController truck, UpgradeItem item)
+    {
+        if (!TryPurchase(item)) return; 
+        truck.AddBackBar();
+    }
+
 
     private bool TryPurchase(UpgradeItem item)
     {
@@ -102,7 +111,8 @@ public class UpgradeStore : MonoBehaviour
         {
             ReferenceManager.Instance.gameManager.RemoveMoney(item.ItemCost);
             float f = item.ItemCost; 
-            item.ItemCost = Mathf.RoundToInt(f *= 1.2f);    
+            item.ItemCost = Mathf.RoundToInt(f *= 1.2f);   
+            item.Used = true; 
             return true;
         }
 

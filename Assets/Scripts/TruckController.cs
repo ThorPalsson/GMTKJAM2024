@@ -64,9 +64,11 @@ public class TruckController : MonoBehaviour
 	[SerializeField] private Transform CargoPoint; 
 
 	public bool ComingFromRespawn; 
-
-
 	public float Speed;
+
+
+	[Header("Visual Upgrades")]
+	[SerializeField] private GameObject backBar; 
 
 	private void Awake() {
 		rb = GetComponent<Rigidbody>();
@@ -283,6 +285,11 @@ public class TruckController : MonoBehaviour
 		}
 
 		boostPower *= BoostPowerUpgrades;
+	}
+
+	public void AddBackBar()
+	{
+		backBar.SetActive(true);
 	}
 
 	public void UpdateGearBox()
