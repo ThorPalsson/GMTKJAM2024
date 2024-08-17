@@ -291,14 +291,14 @@ public class TruckController : MonoBehaviour
 		switch (gearUpgrades)
 		{
 			case 1: 
-				gearTimer  = .3f; 
+				gearTimer  = .2f; 
 				break;
 			case 2:
-				gearTimer = .2f;
+				gearTimer = .1f;
 				gearBoost = 200; 
 				break;
 			case 3:
-				gearTimer = .1f;
+				gearTimer = .075f;
 				gearBoost += 200; 
 				break;
 			case 4: 

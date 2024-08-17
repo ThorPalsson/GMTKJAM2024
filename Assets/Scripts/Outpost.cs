@@ -23,7 +23,7 @@ public class Outpost : MonoBehaviour
     [SerializeField] private GameObject CargoPanel;
 
 
-    private bool hasTakenCargo; 
+    [SerializeField] private bool hasTakenCargo; 
 
     
     void Start()
@@ -33,7 +33,7 @@ public class Outpost : MonoBehaviour
         truck = ReferenceManager.Instance.Truck;
 
         //leaveOutpost.gameObject.SetActive(false);
-        leaveOutpost.onClick.AddListener(() => LeaveTown());
+        //leaveOutpost.onClick.AddListener(() => LeaveTown());
     }
 
     void LateUpdate()
@@ -55,6 +55,7 @@ public class Outpost : MonoBehaviour
 
         print($"Brought {values}$ worth of cargo");
 
+        leaveOutpost.onClick.AddListener(() => LeaveTown());
         ReferenceManager.Instance.gameManager.AddMoney(values);
         movingCamera = true;
     }
@@ -71,6 +72,7 @@ public class Outpost : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None; 
+            
             movingCamera = false;
             ToggleUI(true);
         }
@@ -81,8 +83,11 @@ public class Outpost : MonoBehaviour
     {
         truckCamera.FollowCar = true;
 
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        if (!hasTakenCargo)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void LeaveTown()
@@ -91,14 +96,12 @@ public class Outpost : MonoBehaviour
         {
             CargoPanel.SetActive(true);
             hasTakenCargo = true;
+            Time.timeScale = 0; 
         }
         
         truck.UnParkCar();
         ToggleUI(false);
         CameraToCar();
-
-        Time.timeScale = 0; 
-           
     }
 
     private void ToggleUI(bool value)

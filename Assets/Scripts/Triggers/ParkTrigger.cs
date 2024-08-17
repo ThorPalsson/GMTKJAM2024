@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +19,7 @@ public class ParkTrigger : MonoBehaviour
             wheelAmount++; 
             print ($"Wheel nr {wheelAmount} added");
         }
-
     }
-
 
     private void OnTriggerExit(Collider other) {
         if (other.transform.CompareTag("Wheels"))
@@ -39,6 +38,11 @@ public class ParkTrigger : MonoBehaviour
 
     private void Update()
     {
+        if (isParked && wheelAmount != 4)
+        {
+            isParked = false;
+        }
+
         if (wheelAmount == 4 && !isParked)
         {
             var isStop = truck.Speed < parkingSpeed;

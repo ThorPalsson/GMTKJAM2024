@@ -22,10 +22,16 @@ public class CargoSelection : MonoBehaviour
     public void Start()
     {
         trucK = ReferenceManager.Instance.Truck; 
+    }
+
+    private void OnEnable() 
+    {
+        if (trucK == null)
+        {
+            trucK = ReferenceManager.Instance.Truck; 
+        }
 
         RollItems();
-
-
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -41,6 +47,8 @@ public class CargoSelection : MonoBehaviour
             uiItem.nameText.text = items[i].CargoName; 
             uiItem.estimatedCost.text = $"Estimated Cost: <br> <size=28px>{items[i].CargoWorth}";
             uiItem.itemImage.sprite = items[i].CargoImage;
+
+            uiItem.selectionButton.onClick.RemoveAllListeners();
 
             ConnectSelectionButton(uiItem.selectionButton, items[i].CargoObject);
 
