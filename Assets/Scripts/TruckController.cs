@@ -20,6 +20,9 @@ public class Dot_Truck : System.Object
 
 public class TruckController : MonoBehaviour 
 {
+
+	public bool canDrive; 
+
 	public float maxMotorTorque;
 	public float maxSteeringAngle;
 	public List<Dot_Truck> truck_Infos;
@@ -119,6 +122,12 @@ public class TruckController : MonoBehaviour
 
 	}
 
+	public void ParkCar()
+	{
+		canDrive = false;
+		rb.isKinematic = true;
+	}
+
 
 	private IEnumerator ChangeGear(int newGear)
 	{
@@ -139,6 +148,12 @@ public class TruckController : MonoBehaviour
 
 	public void Update()
 	{
+
+		if (!canDrive)
+		{
+			return; 
+		}
+
 		if (useTiltLimits)
 		{
 			TiltControl();

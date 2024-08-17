@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cargo
   - Car
+  - Wheels
   layers:
   - Default
   - TransparentFX

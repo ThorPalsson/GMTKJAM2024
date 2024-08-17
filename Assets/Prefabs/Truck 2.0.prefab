@@ -268,9 +268,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4938030538055436756}
   - component: {fileID: 2281211124218010237}
+  - component: {fileID: 2845674383910565697}
   m_Layer: 8
   m_Name: BackLeftCollider
-  m_TagString: Untagged
+  m_TagString: Wheels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,6 +330,27 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!65 &2845674383910565697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635912651482202198}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &771510539497012427
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +363,7 @@ GameObject:
   - component: {fileID: 3869682968479466609}
   m_Layer: 0
   m_Name: BedColliders (1)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,7 +455,7 @@ GameObject:
   - component: {fileID: 5760131863842062602}
   m_Layer: 0
   m_Name: BedColliders (1)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,7 +687,7 @@ GameObject:
   - component: {fileID: 2799777549562689043}
   m_Layer: 0
   m_Name: Truck 2.0
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -678,7 +700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2256573915329954627}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 445.61414, y: 2.0279999, z: 378.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -755,6 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d956abbbf901e4bb26a7926a00753a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrive: 1
   maxMotorTorque: 500
   maxSteeringAngle: 40
   truck_Infos:
@@ -772,12 +795,16 @@ MonoBehaviour:
     motor: 1
     steering: 0
     reverseTurn: 0
+  maxThrottleSpeed: 80
   useTiltLimits: 1
   tiltLimit: 120
   speedometerText: {fileID: 0}
   gearText: {fileID: 0}
   visualSpeedModifier: 4
-  Speeds: 50000000360000001c0000000c00000000000000
+  Speeds: 42000000300000001a0000000c00000000000000
+  atThrottleLimit: 0
+  boosPower: 1200
+  boostVFX: {fileID: 2695814189474246309}
   Speed: 0
 --- !u!54 &3983308012862769707
 Rigidbody:
@@ -837,9 +864,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7747706706483601868}
   - component: {fileID: 8547856767605372340}
+  - component: {fileID: 2824074322679961922}
   m_Layer: 8
   m_Name: FrontRightCollider
-  m_TagString: Untagged
+  m_TagString: Wheels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,6 +926,27 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!65 &2824074322679961922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2563492654354152115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2574674345643978881
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +1048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2223094376111439484
 Transform:
   m_ObjectHideFlags: 0
@@ -1201,7 +1250,7 @@ GameObject:
   - component: {fileID: 5447021293846890009}
   m_Layer: 0
   m_Name: BedColliders (1)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1254,7 +1303,7 @@ GameObject:
   - component: {fileID: 5025079485289711066}
   m_Layer: 0
   m_Name: BedColliders (1)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1391,9 +1440,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2921866741161070635}
   - component: {fileID: 3167034058305822719}
+  - component: {fileID: 2854703578851488207}
   m_Layer: 8
   m_Name: FrontLeftCollider
-  m_TagString: Untagged
+  m_TagString: Wheels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1452,6 +1502,27 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!65 &2854703578851488207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400778595228780436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4556216439696897482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,7 +1535,7 @@ GameObject:
   - component: {fileID: 5810524528640649}
   m_Layer: 0
   m_Name: BedColliders
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1522,7 +1593,7 @@ GameObject:
   - component: {fileID: 3935610180032994237}
   m_Layer: 0
   m_Name: BedColliders (2)
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1749,9 +1820,10 @@ GameObject:
   m_Component:
   - component: {fileID: 489716779006079848}
   - component: {fileID: 7321242535580401091}
+  - component: {fileID: 1116452616106557932}
   m_Layer: 8
   m_Name: BackRightCollider
-  m_TagString: Untagged
+  m_TagString: Wheels
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1810,6 +1882,27 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!65 &1116452616106557932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5826841517291880746}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7103049477386916705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,6 +2403,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 19900000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -2375,6 +2484,22 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 19900000, guid: 118e3f56a5212e849882f9a2fccadda7, type: 3}
       propertyPath: m_Materials.Array.size
