@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Cargo
+  - Car
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - UI
   - FallenCargo
   - Car
-  - 
-  - 
+  - Wheels
+  - Cargo
   - 
   - 
   - 
