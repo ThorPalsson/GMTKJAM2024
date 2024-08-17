@@ -95,7 +95,7 @@ MonoBehaviour:
   wizardTools:
     lightingModel: 0
     texturingModel: 2
-    splatsModel: 1
+    splatsModel: 0
     origin: {x: 0, y: 0, z: 0}
     tileSize: {x: 1000, y: 1000, z: 1000}
     tileCountX: 2

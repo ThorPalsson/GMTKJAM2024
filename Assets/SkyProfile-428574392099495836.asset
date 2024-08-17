@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords:
   - DETAIL_OVERLAY
   - OVERHEAD_CLOUD
+  - STARS
   - STARS_LAYER_0
   - SUN
   m_InvalidKeywords: []
@@ -58,63 +59,63 @@ Material:
     m_Ints: []
     m_Floats:
     - _DetailOverlayLayer: 0
-    - _DetailOverlayRotationSpeed: 1
+    - _DetailOverlayRotationSpeed: 0
     - _HorizonCloudAnimationSpeed: 50
-    - _HorizonCloudEndPosition: 0.35
-    - _HorizonCloudSize: 5
-    - _HorizonCloudStartPosition: 0
+    - _HorizonCloudEndPosition: 0.65
+    - _HorizonCloudSize: 4.91
+    - _HorizonCloudStartPosition: -0.1
     - _HorizonCloudStep: 25
-    - _HorizonExponent: 4.1260395
+    - _HorizonExponent: 3.3921747
     - _HorizonStep: 500
     - _HorizonThickness: 1
-    - _MoonGlow: 0.24
-    - _MoonLightIntensity: 0.11199662
-    - _MoonSize: 0.07
-    - _MoonSoftEdge: 0.22
+    - _MoonGlow: 0
+    - _MoonLightIntensity: 0.00034078956
+    - _MoonSize: 0
+    - _MoonSoftEdge: 0
     - _OverheadCloudAltitude: 1000
     - _OverheadCloudAnimationSpeed: 50
     - _OverheadCloudFlowDirectionX: 1
-    - _OverheadCloudFlowDirectionZ: 10
-    - _OverheadCloudRemapMax: 1
-    - _OverheadCloudRemapMin: -0.3885989
+    - _OverheadCloudFlowDirectionZ: 1
+    - _OverheadCloudRemapMax: 1.2222221
+    - _OverheadCloudRemapMin: 0.111940965
     - _OverheadCloudSize: 10
     - _OverheadCloudStep: 2
     - _StarsDensity0: 0.4
     - _StarsDensity1: 0.34
     - _StarsDensity2: 0.45
-    - _StarsEndPosition: 1
+    - _StarsEndPosition: 0
     - _StarsGlow0: 0.01
     - _StarsGlow1: 0.01
     - _StarsGlow2: 0.01
-    - _StarsOpacity: 0.7423109
+    - _StarsOpacity: 0.0009148121
     - _StarsSize0: 0.42
     - _StarsSize1: 0.53
     - _StarsSize2: 0.46
-    - _StarsStartPosition: 0
+    - _StarsStartPosition: -0.01
     - _StarsTwinkle0: 5
     - _StarsTwinkle1: 6
     - _StarsTwinkle2: 2
     - _SunGlow: 0.45
-    - _SunLightIntensity: 0.00028725952
+    - _SunLightIntensity: 0.22252172
     - _SunSize: 0.07
     - _SunSoftEdge: 0.5
     m_Colors:
-    - _DetailOverlayTintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FogColor: {r: 0.4159287, g: 0.36391956, b: 0.5471698, a: 1}
-    - _GroundColor: {r: 0.32680935, g: 0.2874386, b: 0.36369783, a: 1}
+    - _DetailOverlayTintColor: {r: 0, g: 0, b: 0, a: 0}
+    - _FogColor: {r: 0, g: 0, b: 0, a: 0}
+    - _GroundColor: {r: 0.4100945, g: 0.38965663, b: 0.42924377, a: 1}
     - _HorizonCloudColor: {r: 1, g: 1, b: 1, a: 1}
-    - _HorizonColor: {r: 0.4159287, g: 0.36391956, b: 0.5471698, a: 1}
-    - _MoonColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HorizonColor: {r: 0.9055729, g: 0.85231304, b: 0.741789, a: 1}
+    - _MoonColor: {r: 1, g: 1, b: 1, a: 0}
     - _MoonDirection: {r: 1, g: 1, b: 1, a: 0}
-    - _MoonLightColor: {r: 0.8431373, g: 0.9843138, b: 1, a: 1}
-    - _OverheadCloudColor: {r: 1, g: 1, b: 1, a: 0.84511775}
-    - _SkyColor: {r: 0.08056989, g: 0.03172837, b: 0.21698111, a: 1}
+    - _MoonLightColor: {r: 0, g: 0, b: 0, a: 0}
+    - _OverheadCloudColor: {r: 1, g: 1, b: 1, a: 0.9640542}
+    - _SkyColor: {r: 0.20533016, g: 0.35421106, b: 0.5882197, a: 1}
     - _StarsColor0: {r: 0.96470594, g: 0.9450981, b: 0.76470596, a: 1}
     - _StarsColor1: {r: 1, g: 0.5294118, b: 0.93725497, a: 1}
     - _StarsColor2: {r: 0, g: 0.92549026, b: 1, a: 1}
-    - _SunColor: {r: 0.9912896, g: 0.9769171, b: 0.95320237, a: 0}
-    - _SunDirection: {r: 0, g: 0.81391054, b: 0.5809902, a: 0}
-    - _SunLightColor: {r: 1, g: 0.9921569, b: 0.90196085, a: 1}
+    - _SunColor: {r: 0.9742516, g: 0.93176544, b: 0.86166334, a: 1}
+    - _SunDirection: {r: 0, g: -0.258819, b: 0.9659258, a: 0}
+    - _SunLightColor: {r: 1, g: 0.9929226, b: 0.9009434, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &11400000
@@ -137,7 +138,7 @@ MonoBehaviour:
   horizonStep: 500
   fogSyncOption: 2
   fogColor: {r: 0, g: 0, b: 0, a: 0}
-  enableStars: 0
+  enableStars: 1
   starsStartPosition: -0.01
   starsEndPosition: 0
   starsOpacity: 0
@@ -223,6 +224,7 @@ Material:
   m_InvalidKeywords:
   - DETAIL_OVERLAY
   - OVERHEAD_CLOUD
+  - STARS
   - STARS_LAYER_0
   - SUN
   m_LightmapFlags: 4

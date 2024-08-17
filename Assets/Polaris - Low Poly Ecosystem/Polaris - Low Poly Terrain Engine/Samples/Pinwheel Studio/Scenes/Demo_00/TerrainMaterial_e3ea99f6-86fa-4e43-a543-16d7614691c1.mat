@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TerrainMaterial_e3ea99f6-86fa-4e43-a543-16d7614691c1
-  m_Shader: {fileID: -6465566751694194690, guid: 2ea0146f50b90a840b1f693a4c19e4f7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: fb2b753eb810b58459739b842d29293f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

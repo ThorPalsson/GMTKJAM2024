@@ -967,15 +967,15 @@ MonoBehaviour:
       -
       New component: Tree Collider.
 
-      - Faster geometry generation, adding
-      vertex displacement, Polygon Processor system to inject vertex modification
-      into generation process.
+      - Faster geometry generation, adding vertex
+      displacement, Polygon Processor system to inject vertex modification into generation
+      process.
 
-      - Backup files now store outside of Assets
-      folder.
+      - Backup files now store outside of Assets folder.
 
-      - Allow drag and drop Terrain Data into Hierarchy & Scene View
-      to recreate the terrain.'
+      -
+      Allow drag and drop Terrain Data into Hierarchy & Scene View to recreate the
+      terrain.'
     links: []
   - id: 101
     category: 5
