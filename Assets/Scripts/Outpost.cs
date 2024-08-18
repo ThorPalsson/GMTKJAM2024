@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Outpost : MonoBehaviour
 {
 
+    public string OutpostName; 
     [SerializeField] private Transform cameraPostion;
     private bool movingCamera;
     private Transform cameraTransform;
@@ -147,7 +148,8 @@ public class Outpost : MonoBehaviour
 
         foreach(var h in houseUi)
         {
-            h.SetActive(value);
+            if (h != null)
+                h.SetActive(value);
         }
     }
 

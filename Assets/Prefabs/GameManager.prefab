@@ -147,6 +147,10 @@ MonoBehaviour:
     CargoWorth: 2000
     CargoImage: {fileID: 21300000, guid: 26a5cac226640ce4ba2528c2da2d8ee6, type: 3}
     CargoObject: {fileID: 5241727302683791217, guid: b012b449367eaf04484069cd027b1b7f, type: 3}
+  - CargoName: TungsteinBalls
+    CargoWorth: 7200
+    CargoImage: {fileID: 21300000, guid: e7ee48b06a0c19641a202a01f628b1d7, type: 3}
+    CargoObject: {fileID: 1652402003775046603, guid: 8abce3ea5058a0c46932bf6e94a9a323, type: 3}
   savedCargo: {fileID: 0}
 --- !u!114 &4545325686633364767
 MonoBehaviour:
