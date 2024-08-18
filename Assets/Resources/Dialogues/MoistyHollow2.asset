@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f8f88dde47c764d94d3ba715cba1f1, type: 3}
+  m_Name: MoistyHollow2
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - PortName: First Node
+    BaseNodeGUID: 37587bec-42d1-4cfc-8fa9-009781419df7
+    TargetNodeGUID: 60eede49-7bbf-470a-9b3c-eab3b8329326
+    TypeID: 0
+  - PortName: ...
+    BaseNodeGUID: 60eede49-7bbf-470a-9b3c-eab3b8329326
+    TargetNodeGUID: dda02771-582d-4c6a-9256-15821977ae78
+    TypeID: 0
+  - PortName: Okay
+    BaseNodeGUID: 60eede49-7bbf-470a-9b3c-eab3b8329326
+    TargetNodeGUID: 144e83af-3e7f-448d-8fb4-726f1a19ed38
+    TypeID: 0
+  - PortName: No, sorry
+    BaseNodeGUID: 144e83af-3e7f-448d-8fb4-726f1a19ed38
+    TargetNodeGUID: 46664570-7b3b-4ea2-9e03-f725a78893a0
+    TypeID: 0
+  - PortName: Yes
+    BaseNodeGUID: 144e83af-3e7f-448d-8fb4-726f1a19ed38
+    TargetNodeGUID: 81af0248-70ee-408e-b3ef-5eb56f1705bb
+    TypeID: 0
+  - PortName: Oh sorry, i said ...
+    BaseNodeGUID: dda02771-582d-4c6a-9256-15821977ae78
+    TargetNodeGUID: 92ff4f8a-9446-4b2f-a6fa-37dfe26aafed
+    TypeID: 0
+  - PortName: Okay, bye
+    BaseNodeGUID: 92ff4f8a-9446-4b2f-a6fa-37dfe26aafed
+    TargetNodeGUID: ffa441a2-1c9f-483e-bfa2-7b02b24c13a0
+    TypeID: 0
+  - PortName: I thought you were blind
+    BaseNodeGUID: 81af0248-70ee-408e-b3ef-5eb56f1705bb
+    TargetNodeGUID: 9b976722-b09f-4eec-b887-5073f14ebbeb
+    TypeID: 0
+  - PortName: Oh okay
+    BaseNodeGUID: 9b976722-b09f-4eec-b887-5073f14ebbeb
+    TargetNodeGUID: ffa441a2-1c9f-483e-bfa2-7b02b24c13a0
+    TypeID: 0
+  - PortName: Right.. okay, bye
+    BaseNodeGUID: 46664570-7b3b-4ea2-9e03-f725a78893a0
+    TargetNodeGUID: ffa441a2-1c9f-483e-bfa2-7b02b24c13a0
+    TypeID: 0
+  DialogueNodeDatas:
+  - NodeGUID: 60eede49-7bbf-470a-9b3c-eab3b8329326
+    Position: {x: 602, y: 200}
+    DialogueText: Why hello there! I am so delighted you are here. It has been so
+      lonely since we lost our last driver.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: dda02771-582d-4c6a-9256-15821977ae78
+    Position: {x: 1418, y: 277}
+    DialogueText: Oh I'm sorry I couldn't quite hear you, my eyesight isn't what
+      it used to be, I am blind you see
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 144e83af-3e7f-448d-8fb4-726f1a19ed38
+    Position: {x: 1448, y: 109}
+    DialogueText: Did you happen to bring a package that has my anti-blindness medicine
+      ?
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 46664570-7b3b-4ea2-9e03-f725a78893a0
+    Position: {x: 2175, y: 60}
+    DialogueText: Oh well, I can see you are busy with other packages on your pretty
+      car, I won't take more of your time
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 81af0248-70ee-408e-b3ef-5eb56f1705bb
+    Position: {x: 2175, y: 191}
+    DialogueText: 'You clearly didn''t, I can see you aren''t holding a package for
+      me at all. '
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 92ff4f8a-9446-4b2f-a6fa-37dfe26aafed
+    Position: {x: 2236, y: 365}
+    DialogueText: Oh I see, thank you but no. I don't need extended warranty for
+      my car today.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 9b976722-b09f-4eec-b887-5073f14ebbeb
+    Position: {x: 2745, y: 197}
+    DialogueText: I might be blind, but I can see your trickery
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  AttributeNodeDatas: []
+  TraitNodeDatas: []
+  StoryNodeDatas: []
+  ExposedProperties: []
+  EndNodeDatas:
+  - NodeGUID: ffa441a2-1c9f-483e-bfa2-7b02b24c13a0
+    Position: {x: 3317, y: 239}
+  ItemNodeDatas: []

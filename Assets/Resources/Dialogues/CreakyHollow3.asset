@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f8f88dde47c764d94d3ba715cba1f1, type: 3}
+  m_Name: CreakyHollow3
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - PortName: First Node
+    BaseNodeGUID: 96473adc-fd5e-4ef0-8d70-58661ab0129b
+    TargetNodeGUID: c042d9ac-574e-49ca-b222-d1bf05ca544a
+    TypeID: 0
+  - PortName: Hello
+    BaseNodeGUID: c042d9ac-574e-49ca-b222-d1bf05ca544a
+    TargetNodeGUID: b56bd162-3f9f-41ed-8bcc-c81ebf4b26c0
+    TypeID: 0
+  - PortName: Aloha
+    BaseNodeGUID: c042d9ac-574e-49ca-b222-d1bf05ca544a
+    TargetNodeGUID: 2f82854e-9d97-4381-b365-2967f70d6482
+    TypeID: 0
+  - PortName: We could get to know each other
+    BaseNodeGUID: 2f82854e-9d97-4381-b365-2967f70d6482
+    TargetNodeGUID: c88f4d52-162d-4db5-adf1-e02bd8cadcc0
+    TypeID: 0
+  - PortName: Oh, okay
+    BaseNodeGUID: c88f4d52-162d-4db5-adf1-e02bd8cadcc0
+    TargetNodeGUID: f0a3ebcf-097e-4162-ae0c-d0b912c1db4f
+    TypeID: 0
+  - PortName: I'm the delivery driver
+    BaseNodeGUID: b56bd162-3f9f-41ed-8bcc-c81ebf4b26c0
+    TargetNodeGUID: b6dd03bc-7edc-483a-80ed-ded2bd7d3171
+    TypeID: 0
+  - PortName: Sorry, I'll go
+    BaseNodeGUID: b6dd03bc-7edc-483a-80ed-ded2bd7d3171
+    TargetNodeGUID: f0a3ebcf-097e-4162-ae0c-d0b912c1db4f
+    TypeID: 0
+  DialogueNodeDatas:
+  - NodeGUID: c042d9ac-574e-49ca-b222-d1bf05ca544a
+    Position: {x: 577, y: 200}
+    DialogueText: Aloha, I am so glad you are here. It has been so lonely since we
+      lost our last driver.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: b56bd162-3f9f-41ed-8bcc-c81ebf4b26c0
+    Position: {x: 1291, y: 161}
+    DialogueText: I don't know what you're doing here but you should know that I'm
+      armed
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 2f82854e-9d97-4381-b365-2967f70d6482
+    Position: {x: 1291, y: 301}
+    DialogueText: Ah a person of culture, it is a shame I don't know who you are
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: c88f4d52-162d-4db5-adf1-e02bd8cadcc0
+    Position: {x: 1863, y: 317}
+    DialogueText: No thanks
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: b6dd03bc-7edc-483a-80ed-ded2bd7d3171
+    Position: {x: 1931, y: 142}
+    DialogueText: You could be the prince of East Germany for all I care, you should
+      know better than to talk to me
+    IsEndNode: 0
+    CharacterID: 0
+    IsContinue: 0
+    ContinueTimer: 
+  AttributeNodeDatas: []
+  TraitNodeDatas: []
+  StoryNodeDatas: []
+  ExposedProperties: []
+  EndNodeDatas:
+  - NodeGUID: f0a3ebcf-097e-4162-ae0c-d0b912c1db4f
+    Position: {x: 2778, y: 263}
+  ItemNodeDatas: []

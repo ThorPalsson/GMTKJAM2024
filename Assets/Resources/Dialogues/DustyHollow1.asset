@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f8f88dde47c764d94d3ba715cba1f1, type: 3}
+  m_Name: DustyHollow1
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - PortName: First Node
+    BaseNodeGUID: abc735ae-658a-4803-8699-3868aeae053d
+    TargetNodeGUID: 5cbae919-44b9-4c25-9a4f-cee37c2de2ab
+    TypeID: 0
+  - PortName: We ? I don't see anyone else
+    BaseNodeGUID: 5cbae919-44b9-4c25-9a4f-cee37c2de2ab
+    TargetNodeGUID: 1f7e4679-4a6b-4c4b-8ba0-319d2aa1c432
+    TypeID: 0
+  - PortName: Didn't we just talk?
+    BaseNodeGUID: 5cbae919-44b9-4c25-9a4f-cee37c2de2ab
+    TargetNodeGUID: 3814c233-144d-4f76-9f90-ce4cc0c5a992
+    TypeID: 0
+  - PortName: She's fine I think
+    BaseNodeGUID: 1f7e4679-4a6b-4c4b-8ba0-319d2aa1c432
+    TargetNodeGUID: c0119b5f-8c08-4d0d-a74b-5762feee2f74
+    TypeID: 0
+  - PortName: Bye..
+    BaseNodeGUID: c0119b5f-8c08-4d0d-a74b-5762feee2f74
+    TargetNodeGUID: eef19aaf-1128-4f96-bf0b-5e116c1ee514
+    TypeID: 0
+  - PortName: That's.. not what i meant
+    BaseNodeGUID: 3814c233-144d-4f76-9f90-ce4cc0c5a992
+    TargetNodeGUID: a88aa152-10d5-4cd7-b445-3f3a43eb1b72
+    TypeID: 0
+  - PortName: Bye
+    BaseNodeGUID: a88aa152-10d5-4cd7-b445-3f3a43eb1b72
+    TargetNodeGUID: 8dd7f0b2-819c-460d-9770-908795e07368
+    TypeID: 0
+  DialogueNodeDatas:
+  - NodeGUID: 5cbae919-44b9-4c25-9a4f-cee37c2de2ab
+    Position: {x: 531, y: 188}
+    DialogueText: Greetings, we are glad you are here. It has been so lonely since
+      we lost our last driver.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 3814c233-144d-4f76-9f90-ce4cc0c5a992
+    Position: {x: 1248, y: 315}
+    DialogueText: We did just talk yes, we just told you we have been so lonesly
+      since we lost our last driver
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 1f7e4679-4a6b-4c4b-8ba0-319d2aa1c432
+    Position: {x: 1248, y: 111}
+    DialogueText: We would be surprised if you could. Anyway, how's your mother?
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: c0119b5f-8c08-4d0d-a74b-5762feee2f74
+    Position: {x: 1873, y: 111}
+    DialogueText: Fantastic news, we're so glad to hear it. Have a good day now!
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: eef19aaf-1128-4f96-bf0b-5e116c1ee514
+    Position: {x: 2512, y: 86}
+    DialogueText: Dialogue Node
+    IsEndNode: 1
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: a88aa152-10d5-4cd7-b445-3f3a43eb1b72
+    Position: {x: 1982, y: 328}
+    DialogueText: Oh boy look at the time, we'll be late for the breakfast club!
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 8dd7f0b2-819c-460d-9770-908795e07368
+    Position: {x: 2557, y: 344}
+    DialogueText: Dialogue Node
+    IsEndNode: 1
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  AttributeNodeDatas: []
+  TraitNodeDatas: []
+  StoryNodeDatas: []
+  ExposedProperties: []
+  EndNodeDatas: []
+  ItemNodeDatas: []
