@@ -66,7 +66,7 @@ public class UpgradeStore : MonoBehaviour
                 break;
         }
 
-        b.onClick.AddListener(() => RollItems());
+        //b.onClick.AddListener(() => RollItems());
 
     }
 
@@ -76,6 +76,7 @@ public class UpgradeStore : MonoBehaviour
         print ("Trying to buy power");
         if (!TryPurchase(item)) return;
         truck.AddPower();
+        RollItems();
 
     }
 
@@ -83,24 +84,28 @@ public class UpgradeStore : MonoBehaviour
     {
         if (!TryPurchase(item)) return;
         truck.AddBreaks();
+        RollItems();
     }
 
     private void TryBuyBoost(TruckController truck, UpgradeItem item)
     {
         if (!TryPurchase(item)) return; 
         truck.NitroUpgrade();
+        RollItems();
     }
 
     private void TryBuyGearBox(TruckController truck, UpgradeItem item)
     {
         if (!TryPurchase(item)) return;
         truck.UpdateGearBox();
+        RollItems();
     }
 
     private void TryBuyBackBar(TruckController truck, UpgradeItem item)
     {
         if (!TryPurchase(item)) return; 
         truck.AddBackBar();
+        RollItems();
     }
 
 

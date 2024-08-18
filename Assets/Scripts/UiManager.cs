@@ -7,6 +7,6 @@ public class UiManager : MonoBehaviour
 
     public void ChangeMoneyText(int money)
     {
-        MoneyText.text = money.ToString() + "$";
+        MoneyText.text = money.ToString();
     }
 }

@@ -117,7 +117,7 @@ public class Outpost : MonoBehaviour
     private void ToggleUI(bool value)
     {
         leaveOutpost.gameObject.SetActive(value);
-        parkUi.SetActive(value);
+        parkUi.SetActive(!value);
 
         foreach(var h in houseUi)
         {
