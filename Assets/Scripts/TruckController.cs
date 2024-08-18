@@ -378,7 +378,7 @@ public class TruckController : MonoBehaviour
 
 	public void AddCargo(GameObject newCargo)
 	{
-		Instantiate(newCargo, CargoPoint.position, CargoPoint.rotation);
+		Instantiate(newCargo, CargoPoint.position, CargoPoint.rotation, CargoPoint);
 	}
 
 }
