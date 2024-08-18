@@ -13,19 +13,17 @@ MonoBehaviour:
   m_Name: DefaultWaterFX
   m_EditorClassIdentifier: 
   enableUnderwater: 1
-  underwaterWaterLevel: 0
   underwaterMaxDepth: 20
+  underwaterSurfaceColorBoost: 1
   underwaterShallowFogColor: {r: 0.051397298, g: 0.1981132, b: 0.18204646, a: 0.8235294}
   underwaterDeepFogColor: {r: 0.056870773, g: 0.16981131, b: 0.1429207, a: 1}
   underwaterViewDistance: 50
   underwaterEnableCaustic: 1
-  underwaterCausticTexture: {fileID: 2800000, guid: eeacbffe8eb46d343b0d7a9189130772,
-    type: 3}
+  underwaterCausticTexture: {fileID: 2800000, guid: eeacbffe8eb46d343b0d7a9189130772, type: 3}
   underwaterCausticSize: 10
   underwaterCausticStrength: 1
   underwaterEnableDistortion: 1
-  underwaterDistortionTexture: {fileID: 2800000, guid: 968a24349aa82914f94ad8a145a1e8af,
-    type: 3}
+  underwaterDistortionTexture: {fileID: 2800000, guid: 968a24349aa82914f94ad8a145a1e8af, type: 3}
   underwaterDistortionStrength: 0.3
   underwaterWaterFlowSpeed: 1
   enableWetLens: 1
