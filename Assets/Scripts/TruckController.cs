@@ -66,6 +66,19 @@ public class TruckController : MonoBehaviour
 	public bool ComingFromRespawn; 
 	public float Speed;
 
+	private float downGearValue; 
+	private float upGearValue; 
+	[SerializeField]private float pitchModifier = 1.5f;
+	[SerializeField] private float lowPitchValue = .5f; 
+
+	[SerializeField] private AudioSource carAudio; 
+	[SerializeField] private float audioPerc; 
+
+	private float carAudioVolume; 
+
+	[SerializeField] private AudioClip[] gearClips; 
+	[SerializeField] private AudioSource gearSource;
+
 
 	[Header("Visual Upgrades")]
 	[SerializeField] private GameObject backBar; 
@@ -84,6 +97,13 @@ public class TruckController : MonoBehaviour
 		{
 			Gears.Add(Speeds.Length - i, Speeds[i]);
 		}
+
+		downGearValue = 0; 
+		upGearValue = Gears[currentGear + 1];
+
+		carAudioVolume = carAudio.volume; 
+
+		gearSource.clip = gearClips[0];
 	}
 
 
@@ -116,7 +136,7 @@ public class TruckController : MonoBehaviour
 	private void HandleGears(float speedValue)
 	{
 		if (isChangingGear) return;
-		var expectedGear = 1; 
+		var expectedGear = currentGear; 
 
 		if (speedValue < 0)
 		{
@@ -127,16 +147,27 @@ public class TruckController : MonoBehaviour
 			{
 				if (speedValue >= gear.Value)
 				{
-					expectedGear = gear.Key;
-					break;
+					if (gear.Key != currentGear)
+					{
+						expectedGear = gear.Key;
+						break;
+					}
 				}
 			}
 		}
 
+		print (expectedGear);
 
 		if (expectedGear != currentGear)
 		{
-			StartCoroutine(ChangeGear(expectedGear));
+			if (expectedGear > currentGear && (speedValue - 2) >= Gears[Mathf.Min(currentGear + 1, 5)] )
+			{ 
+				StartCoroutine(ChangeGear(Mathf.Min(currentGear + 1, 5)));
+			} else if (expectedGear < currentGear && (speedValue + 2) <= Gears[Mathf.Max(currentGear, 1)])
+			{
+				StartCoroutine(ChangeGear(expectedGear));
+			}
+
 		}
 
 	}
@@ -154,18 +185,29 @@ public class TruckController : MonoBehaviour
 
 	private IEnumerator ChangeGear(int newGear)
 	{
+		carAudio.volume = (carAudioVolume * .2f); 
+		gearSource.Play();
 		isChangingGear = true;
 		yield return new WaitForSeconds(gearTimer);
 
-
 		currentGear = newGear;
+
+		if (currentGear != 5 && currentGear != -1)
+		{
+			downGearValue = Gears[currentGear]; 
+			upGearValue = Gears[currentGear + 1]; 
+		}  else 
+		{
+			downGearValue = Gears[currentGear]; 
+			upGearValue = maxThrottleSpeed; 
+		}
 
 		if (newGear != -1)
 			gearText.text = newGear.ToString();
 		else 
 			gearText.text = "R";
 
-
+		carAudio.volume = carAudioVolume;
 		isChangingGear = false;
 
 		if (gearBoost != 0)
@@ -176,8 +218,6 @@ public class TruckController : MonoBehaviour
 			yield return new WaitForSeconds(.1f);
 			gearVFX.SetActive(false);
 		}
-
-
 	}
 
 
@@ -234,6 +274,7 @@ public class TruckController : MonoBehaviour
 		var visualSpeed = Speed * visualSpeedModifier; 
 		HandleGears(visualSpeed);
 		speedometerText.text = visualSpeed.ToString("F0") + "KM/H";
+		PitchAudio();
 
 		atThrottleLimit = visualSpeed > maxThrottleSpeed; 
 
@@ -263,6 +304,19 @@ public class TruckController : MonoBehaviour
 
 			VisualizeWheel(truck_Info);
 		}
+	}
+
+	private void PitchAudio()
+	{
+		var speed = Speed * visualSpeedModifier; 
+		var perc = (speed - downGearValue) / (upGearValue - downGearValue);
+		var shiftValue = perc * pitchModifier; 
+
+		//print ($"{downGearValue} / {speed} / {upGearValue}"); 
+		//print ("perc: " + perc + "shiftValue: " + shiftValue);
+
+
+		carAudio.pitch = lowPitchValue + shiftValue; 
 	}
 
 	public void AddPower()
@@ -301,9 +355,11 @@ public class TruckController : MonoBehaviour
 		{
 			case 1: 
 				gearTimer  = .2f; 
+				gearSource.clip = gearClips[1]; 
 				break;
 			case 2:
 				gearTimer = .1f;
+				gearSource.clip = gearClips[2]; 
 				gearBoost = 200; 
 				break;
 			case 3:
