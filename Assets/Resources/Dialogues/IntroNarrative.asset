@@ -17,7 +17,15 @@ MonoBehaviour:
     BaseNodeGUID: cac21d97-5463-401e-87dc-a35cd96a3c3f
     TargetNodeGUID: 785af741-d066-47a7-af80-7382dac76ad8
     TypeID: 0
-  - PortName: I have
+  - PortName: I'll take them for you
+    BaseNodeGUID: e791f0ad-960e-424b-839a-ff01c61ad6dc
+    TargetNodeGUID: e1a64629-456e-49e7-89fd-774f30aad447
+    TypeID: 0
+  - PortName: My ride is iconic!
+    BaseNodeGUID: e1a64629-456e-49e7-89fd-774f30aad447
+    TargetNodeGUID: c3880c88-9785-4935-b292-c5e336c057d1
+    TypeID: 0
+  - PortName: You lost him?
     BaseNodeGUID: 785af741-d066-47a7-af80-7382dac76ad8
     TargetNodeGUID: e791f0ad-960e-424b-839a-ff01c61ad6dc
     TypeID: 0
@@ -25,15 +33,7 @@ MonoBehaviour:
     BaseNodeGUID: 785af741-d066-47a7-af80-7382dac76ad8
     TargetNodeGUID: 4bcd6271-108d-4a75-a123-43dd7d960701
     TypeID: 0
-  - PortName: I'll take them for you
-    BaseNodeGUID: e791f0ad-960e-424b-839a-ff01c61ad6dc
-    TargetNodeGUID: e1a64629-456e-49e7-89fd-774f30aad447
-    TypeID: 0
-  - PortName: What do you mean!
-    BaseNodeGUID: e1a64629-456e-49e7-89fd-774f30aad447
-    TargetNodeGUID: c3880c88-9785-4935-b292-c5e336c057d1
-    TypeID: 0
-  - PortName: You are right
+  - PortName: Yes sir!
     BaseNodeGUID: c3880c88-9785-4935-b292-c5e336c057d1
     TargetNodeGUID: 14b83f00-3bc4-4e19-9c92-0983741e579f
     TypeID: 0
@@ -42,51 +42,51 @@ MonoBehaviour:
     TargetNodeGUID: 14b83f00-3bc4-4e19-9c92-0983741e579f
     TypeID: 0
   DialogueNodeDatas:
-  - NodeGUID: 785af741-d066-47a7-af80-7382dac76ad8
-    Position: {x: 560, y: 200}
-    DialogueText: Hello weary traveler, I see you have come to these parts in search
-      of riches
-    IsEndNode: 0
+  - NodeGUID: 4bcd6271-108d-4a75-a123-43dd7d960701
+    Position: {x: 1205, y: 284}
+    DialogueText: 
+    IsEndNode: 1
     CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
-  - NodeGUID: 4bcd6271-108d-4a75-a123-43dd7d960701
-    Position: {x: 1205.3333, y: 284}
-    DialogueText: 
-    IsEndNode: 0
-    CharacterID: 0
-    IsContinue: 0
-    ContinueTimer: 
   - NodeGUID: e791f0ad-960e-424b-839a-ff01c61ad6dc
-    Position: {x: 1205.3333, y: 111.33333}
-    DialogueText: 'Good, I have a job for you. You see I have some packages that
-      need to get to Dusty Hollow. '
+    Position: {x: 1205, y: 111}
+    DialogueText: Never you mind, I have a job for you. There are some packages that
+      need to get to Dusty Hollow.
     IsEndNode: 0
     CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: e1a64629-456e-49e7-89fd-774f30aad447
-    Position: {x: 1910, y: 111.33333}
-    DialogueText: Good! You will be paid at the Dusty Hollows, but remember the more
-      cargo you loose the worse the payoff will be. And seeing your ride, you seem
-      to need the money.
-    IsEndNode: 0
-    CharacterID: 1
-    IsContinue: 0
-    ContinueTimer: 
-  - NodeGUID: c3880c88-9785-4935-b292-c5e336c057d1
-    Position: {x: 3099.3335, y: 111.33333}
-    DialogueText: 'Hah! I could hear your gearbox from miles away. Now no more of
-      this! You have a job to do. '
+    Position: {x: 1910, y: 111}
+    DialogueText: Excellent! You will be paid at the Dusty Hollows, any lost packages
+      will be deducted off your pay however. And seeing your ride, you seem to need
+      the money.
     IsEndNode: 0
     CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: 14b83f00-3bc4-4e19-9c92-0983741e579f
-    Position: {x: 4071.3335, y: 202.66667}
+    Position: {x: 4071, y: 203}
     DialogueText: Dialogue Node
     IsEndNode: 1
-    CharacterID: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 785af741-d066-47a7-af80-7382dac76ad8
+    Position: {x: 560, y: 200}
+    DialogueText: Greetings, I am glad you are here. It has been so lonely since
+      we lost our last driver.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: c3880c88-9785-4935-b292-c5e336c057d1
+    Position: {x: 3099, y: 111}
+    DialogueText: Hah! I could hear your gearbox from miles away. Now no more of
+      this! You have a job to do. Off you go!
+    IsEndNode: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   AttributeNodeDatas: []
