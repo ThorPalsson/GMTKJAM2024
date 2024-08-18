@@ -51,6 +51,8 @@ MonoBehaviour:
   Truck: {fileID: 0}
   CameraTransform: {fileID: 0}
   Camera: {fileID: 0}
+  DialougeCanvas: {fileID: 0}
+  DialogueSystem: {fileID: 0}
   CameraOriginalPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &9164501069300928761
 MonoBehaviour:
@@ -133,6 +135,14 @@ MonoBehaviour:
     CargoWorth: 2400
     CargoImage: {fileID: 21300000, guid: b0c64681fb0b53b4db497bcc0b085f14, type: 3}
     CargoObject: {fileID: 870633151695803419, guid: dafbc31415be7654098adb09fa3f3811, type: 3}
+  - CargoName: Train
+    CargoWorth: 20000
+    CargoImage: {fileID: 21300000, guid: 7819261b5be20c24c95f8bae99480fe7, type: 3}
+    CargoObject: {fileID: 6168689522197541488, guid: 3fc68daf7fa3c4147b1c12442af9c334, type: 3}
+  - CargoName: Bullets
+    CargoWorth: 1530
+    CargoImage: {fileID: 21300000, guid: 131e6b63d55ff6144ac75c6370c73846, type: 3}
+    CargoObject: {fileID: 8676386864672332586, guid: b35dfdbb99623b446bac54ec2fc4c7c9, type: 3}
   savedCargo: {fileID: 0}
 --- !u!114 &4545325686633364767
 MonoBehaviour:
