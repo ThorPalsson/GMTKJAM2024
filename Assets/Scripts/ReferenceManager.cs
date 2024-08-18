@@ -12,6 +12,7 @@ public class ReferenceManager : MonoBehaviour
     public GameObject DialougeCanvas; 
     public Dialogue DialogueSystem; 
     public Vector3 CameraOriginalPosition; 
+    public StatusPanel statusPanel;
 
 
     private void Awake() {

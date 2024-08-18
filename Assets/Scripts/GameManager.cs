@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
    public int Money; 
+   public int LifeTimeMoney; 
    private TruckController truck => ReferenceManager.Instance.Truck; 
    public UpgradeItem[] Upgrades;
    public CargoTypes[] CargoTypes;
@@ -14,9 +15,13 @@ public class GameManager : MonoBehaviour
    private Quaternion saveRotation;
    [SerializeField] private GameObject savedCargo; 
 
-   public void AddMoney(int value)
+   public float AllGatheredMass = 0; 
+
+   public void AddMoney(int value, float mass = 0)
    {
         Money += value;
+        LifeTimeMoney += value; 
+        AllGatheredMass += mass; 
         ReferenceManager.Instance.uiManager.ChangeMoneyText(Money);
    }
 

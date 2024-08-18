@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Cargo : MonoBehaviour
@@ -10,6 +11,12 @@ public class Cargo : MonoBehaviour
     [SerializeField] private bool useFallEffect = true;
     [SerializeField] private bool killParent = false;
     [SerializeField] private GameObject parent; 
+    public float Weight; 
+
+    private void Start()
+    {
+        Weight = GetComponent<Rigidbody>().mass; 
+    }
 
 
     private void OnCollisionEnter(Collision other) {

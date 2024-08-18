@@ -32,6 +32,8 @@ public class Outpost : MonoBehaviour
     private Transform dialougeTransform;
     private bool inDialouge;
 
+    private int moneyBrought; 
+
     
     void Start()
     {
@@ -54,6 +56,7 @@ public class Outpost : MonoBehaviour
     {
         truck.ParkCar();
         int values = 0;
+        float weight = 0; 
 
         if (!hasBroughtCargo)
         {
@@ -61,6 +64,7 @@ public class Outpost : MonoBehaviour
             {
                 print ($"adding {c.name} with value of {c.cargoValue}"); 
                 values += c.cargoValue; 
+                weight += c.Weight; 
                 c.DestroyCargo(true);
             }
             hasBroughtCargo = true;
@@ -69,7 +73,8 @@ public class Outpost : MonoBehaviour
         print($"Brought {values}$ worth of cargo");
 
         leaveOutpost.onClick.AddListener(() => LeaveOutpost());
-        ReferenceManager.Instance.gameManager.AddMoney(values);
+        moneyBrought = values; 
+        ReferenceManager.Instance.gameManager.AddMoney(values, weight);
         movingCamera = true;
     }
 
@@ -87,7 +92,8 @@ public class Outpost : MonoBehaviour
             Cursor.lockState = CursorLockMode.None; 
             
             movingCamera = false;
-            ToggleUI(true);
+            ReferenceManager.Instance.statusPanel.ShowPanel(moneyBrought, this); 
+            
         }
     }
 
@@ -141,7 +147,7 @@ public class Outpost : MonoBehaviour
         CameraToCar();
     }
 
-    private void ToggleUI(bool value)
+    public void ToggleUI(bool value)
     {
         leaveOutpost.gameObject.SetActive(value);
         parkUi.SetActive(!value);
