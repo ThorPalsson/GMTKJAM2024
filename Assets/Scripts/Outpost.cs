@@ -58,6 +58,7 @@ public class Outpost : MonoBehaviour
         {
             foreach (var c in cargos)
             {
+                print ($"adding {c.name} with value of {c.cargoValue}"); 
                 values += c.cargoValue; 
                 c.DestroyCargo(true);
             }

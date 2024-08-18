@@ -378,6 +378,11 @@ public class TruckController : MonoBehaviour
 
 	public void AddCargo(GameObject newCargo)
 	{
+		var cargoKids = CargoPoint.GetComponentsInChildren<Transform>();
+		foreach(var c in cargoKids)
+		{
+			c.gameObject.SetActive(false);
+		}	
 		Instantiate(newCargo, CargoPoint.position, CargoPoint.rotation, CargoPoint);
 	}
 

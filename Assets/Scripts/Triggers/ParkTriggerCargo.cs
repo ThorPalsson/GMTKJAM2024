@@ -23,12 +23,10 @@ public class ParkTriggerCargo : MonoBehaviour
    }
 
 
-   private void OnTriggerEnter(Collider other) {
-
-        if (!other.CompareTag("Cargo")) return;
-
-        cargo.Add(other.gameObject);
-   }
+     private void OnTriggerEnter(Collider other) {
+          if (!other.CompareTag("Cargo")) return;
+          cargo.Add(other.gameObject);
+     }
 
 
    private void OnTriggerExit(Collider other) {

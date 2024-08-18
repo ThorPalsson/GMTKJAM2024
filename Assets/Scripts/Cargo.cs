@@ -8,6 +8,8 @@ public class Cargo : MonoBehaviour
     public int cargoValue = 1;
 
     [SerializeField] private bool useFallEffect = true;
+    [SerializeField] private bool killParent = false;
+    [SerializeField] private GameObject parent; 
 
 
     private void OnCollisionEnter(Collision other) {
@@ -24,6 +26,11 @@ public class Cargo : MonoBehaviour
     {
         if (useFallEffect)
             Instantiate(fallenEffect, transform.position, Quaternion.identity);
+        
+        if (killParent)
+        {
+            Destroy(parent); 
+        }
 
         Destroy(this.gameObject);
     }
