@@ -4,10 +4,13 @@ using Anchry.Dialogue;
 public class NewDialogue : MonoBehaviour
 {
     public DialogueContainer Conversation; 
+    [SerializeField] private Transform cameraPosition;
+    [SerializeField] private Outpost outpost; 
 
     public void StartDialogue()
     {
+        outpost.StartDialogue(cameraPosition);
         ReferenceManager.Instance.DialougeCanvas.SetActive(true); 
-        ReferenceManager.Instance.DialogueSystem.StartDialogue(Conversation);
+        ReferenceManager.Instance.DialogueSystem.StartDialogue(Conversation, outpost);
     }
 }

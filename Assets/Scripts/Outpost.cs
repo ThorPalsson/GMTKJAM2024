@@ -28,6 +28,8 @@ public class Outpost : MonoBehaviour
 
     [SerializeField] private Transform truckRespawn; 
 
+    private Transform dialougeTransform;
+    private bool inDialouge;
 
     
     void Start()
@@ -43,6 +45,7 @@ public class Outpost : MonoBehaviour
     void LateUpdate()
     {
         if (movingCamera) CameraToOutpost();
+        if (inDialouge) CameraToDialogue();
     }
 
 
@@ -84,6 +87,28 @@ public class Outpost : MonoBehaviour
             movingCamera = false;
             ToggleUI(true);
         }
+    }
+
+    private void CameraToDialogue()
+    {
+        if (Vector3.Distance(cameraTransform.position, cameraPostion.position) > 0.05f)
+        {
+            cameraTransform.position = Vector3.MoveTowards(cameraTransform.position, dialougeTransform.position, cameraMoveSpeed * Time.deltaTime);
+            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, dialougeTransform.rotation, camearRotationSpeed * Time.deltaTime);
+        }
+    }
+
+    public void StartDialogue(Transform cameraLocation)
+    {
+        dialougeTransform = cameraLocation; 
+        inDialouge = true; 
+        ToggleUI(false);
+    }
+
+    public void EndDialogue()
+    {
+        inDialouge = false;
+        movingCamera = true;
     }
 
     private void CameraToCar()

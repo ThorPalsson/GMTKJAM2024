@@ -25,6 +25,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private TMP_Text talkerText;
     private DialogueContainer _currentDialogue;
+    private Outpost outpost; 
     
     //public bool ActiveDialogue => ConversationParent.activeSelf; 
 
@@ -50,8 +51,9 @@ public class Dialogue : MonoBehaviour
     
     }
 
-    public void StartDialogue(DialogueContainer dialogue)
+    public void StartDialogue(DialogueContainer dialogue, Outpost post)
     {
+        outpost = post;
         _currentDialogue = dialogue; 
         NextDialogue(_currentDialogue.NodeLinks[0].TargetNodeGUID);  
     }
@@ -148,6 +150,8 @@ public class Dialogue : MonoBehaviour
             int textToRemove = ActiveText.Count - _textStoreAmount;
             ActiveText.RemoveRange(0, textToRemove);
         }
+
+        outpost.EndDialogue();
 
         print ("Ending Dialogue");
         dialogueText.text = "";

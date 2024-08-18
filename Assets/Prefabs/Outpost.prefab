@@ -1552,7 +1552,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4044912998503962967}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -2745,6 +2745,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Conversation: {fileID: 11400000, guid: 0012f68d5c7fb134eb448593043341fe, type: 2}
+  cameraPosition: {fileID: 0}
+  outpost: {fileID: 8468749389218651144}
 --- !u!1 &6830539274757765812
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,6 +4226,10 @@ PrefabInstance:
     - target: {fileID: 4331832858961822, guid: 461adae6d8ea6d74fac73e4bd90066cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -21.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 64238352064027710, guid: 461adae6d8ea6d74fac73e4bd90066cb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
