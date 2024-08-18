@@ -53,7 +53,6 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue(DialogueContainer dialogue)
     {
         _currentDialogue = dialogue; 
-        ConversationParent.SetActive(true);
         NextDialogue(_currentDialogue.NodeLinks[0].TargetNodeGUID);  
     }
 
@@ -61,7 +60,7 @@ public class Dialogue : MonoBehaviour
     private void StartTestDialogue()
     {  
         _currentDialogue = TestContainer; 
-        ConversationParent.SetActive(true); 
+        //ConversationParent.SetActive(true); 
         NextDialogue(_currentDialogue.NodeLinks[0].TargetNodeGUID); 
     }
 
@@ -132,6 +131,8 @@ public class Dialogue : MonoBehaviour
             if (node.BaseNodeGUID == guid)
                 return true;
         }
+
+        print ("Found no answers for the node"); 
         return false; 
     }
 
@@ -148,6 +149,7 @@ public class Dialogue : MonoBehaviour
             ActiveText.RemoveRange(0, textToRemove);
         }
 
+        print ("Ending Dialogue");
         dialogueText.text = "";
         //ConversationParent.SetActive(false);
         this.gameObject.SetActive(false);

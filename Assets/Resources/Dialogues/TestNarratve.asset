@@ -17,24 +17,24 @@ MonoBehaviour:
     BaseNodeGUID: 6fe1ca4f-74d5-4df2-9257-c2056f4b4a1f
     TargetNodeGUID: f44da3fe-e983-4128-b96f-8bb0ec2eeac8
     TypeID: 0
-  - PortName: This is a test
-    BaseNodeGUID: f44da3fe-e983-4128-b96f-8bb0ec2eeac8
-    TargetNodeGUID: 9d9c8d7c-4973-4787-8ab3-f141bd1fc687
-    TypeID: 0
-  - PortName: This is a test
-    BaseNodeGUID: f44da3fe-e983-4128-b96f-8bb0ec2eeac8
-    TargetNodeGUID: 7fdb78fc-6006-452e-9dcb-481c3935305e
-    TypeID: 0
-  - PortName: I want to go
-    BaseNodeGUID: f44da3fe-e983-4128-b96f-8bb0ec2eeac8
-    TargetNodeGUID: 8c5fac1b-0e60-469a-9583-825803d74d8d
-    TypeID: 0
   - PortName: Uh
     BaseNodeGUID: 9d9c8d7c-4973-4787-8ab3-f141bd1fc687
     TargetNodeGUID: 8c5fac1b-0e60-469a-9583-825803d74d8d
     TypeID: 0
   - PortName: OH
     BaseNodeGUID: 7fdb78fc-6006-452e-9dcb-481c3935305e
+    TargetNodeGUID: 8c5fac1b-0e60-469a-9583-825803d74d8d
+    TypeID: 0
+  - PortName: This is a test
+    BaseNodeGUID: f44da3fe-e983-4128-b96f-8bb0ec2eeac8
+    TargetNodeGUID: 9d9c8d7c-4973-4787-8ab3-f141bd1fc687
+    TypeID: 0
+  - PortName: This is also a test
+    BaseNodeGUID: f44da3fe-e983-4128-b96f-8bb0ec2eeac8
+    TargetNodeGUID: 7fdb78fc-6006-452e-9dcb-481c3935305e
+    TypeID: 0
+  - PortName: I want to go
+    BaseNodeGUID: f44da3fe-e983-4128-b96f-8bb0ec2eeac8
     TargetNodeGUID: 8c5fac1b-0e60-469a-9583-825803d74d8d
     TypeID: 0
   DialogueNodeDatas:
@@ -56,11 +56,11 @@ MonoBehaviour:
     Position: {x: 588, y: 200}
     DialogueText: Hello Sir Avalon
     IsEndNode: 0
-    CharacterID: 3
+    CharacterID: 0
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: 8c5fac1b-0e60-469a-9583-825803d74d8d
-    Position: {x: 1427.3334, y: 368}
+    Position: {x: 1427.3333, y: 368}
     DialogueText: Good Bye
     IsEndNode: 1
     CharacterID: 0

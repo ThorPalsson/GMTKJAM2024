@@ -2744,8 +2744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c775517f81f4644bbedb7a397c9acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Conversation: {fileID: 11400000, guid: bd61b9d8c40f3fc46900011a7c90ef56, type: 2}
-  dialougeCanvas: {fileID: 0}
+  Conversation: {fileID: 11400000, guid: 0012f68d5c7fb134eb448593043341fe, type: 2}
 --- !u!1 &6830539274757765812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,7 +3305,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8990953193774792326}
         m_TargetAssemblyTypeName: NewDialogue, Assembly-CSharp
-        m_MethodName: Interact
+        m_MethodName: StartDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -4,12 +4,10 @@ using Anchry.Dialogue;
 public class NewDialogue : MonoBehaviour
 {
     public DialogueContainer Conversation; 
-    [SerializeField] private GameObject dialougeCanvas; 
 
-    [ContextMenu("Test Dialogue")]
-    public void Interact()
+    public void StartDialogue()
     {
-        dialougeCanvas.SetActive(true); 
-        Dialogue.Instance.StartDialogue(Conversation); 
+        ReferenceManager.Instance.DialougeCanvas.SetActive(true); 
+        ReferenceManager.Instance.DialogueSystem.StartDialogue(Conversation);
     }
 }
