@@ -138,11 +138,15 @@ MonoBehaviour:
   - CargoName: Train
     CargoWorth: 20000
     CargoImage: {fileID: 21300000, guid: 7819261b5be20c24c95f8bae99480fe7, type: 3}
-    CargoObject: {fileID: 6168689522197541488, guid: 3fc68daf7fa3c4147b1c12442af9c334, type: 3}
+    CargoObject: {fileID: 949783215332185627, guid: f278c6023102f384399c8d44d65a4e2b, type: 3}
   - CargoName: Bullets
     CargoWorth: 1530
     CargoImage: {fileID: 21300000, guid: 131e6b63d55ff6144ac75c6370c73846, type: 3}
     CargoObject: {fileID: 8676386864672332586, guid: b35dfdbb99623b446bac54ec2fc4c7c9, type: 3}
+  - CargoName: Coffins
+    CargoWorth: 2000
+    CargoImage: {fileID: 21300000, guid: 26a5cac226640ce4ba2528c2da2d8ee6, type: 3}
+    CargoObject: {fileID: 5241727302683791217, guid: b012b449367eaf04484069cd027b1b7f, type: 3}
   savedCargo: {fileID: 0}
 --- !u!114 &4545325686633364767
 MonoBehaviour:

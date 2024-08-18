@@ -120,7 +120,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119016626507962553}
   serializedVersion: 4
-  m_Mass: 1.5
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -155,3 +155,5 @@ MonoBehaviour:
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
   cargoValue: 15
   useFallEffect: 1
+  killParent: 0
+  parent: {fileID: 0}
