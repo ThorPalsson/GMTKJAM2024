@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f8f88dde47c764d94d3ba715cba1f1, type: 3}
+  m_Name: HarbourTown
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - PortName: Can you tell me what happened to him?
+    BaseNodeGUID: 6ce12194-2711-419f-9a09-a791b0c1914a
+    TargetNodeGUID: 99c22e0c-58f4-4435-9f27-870228baa1b8
+    TypeID: 0
+  - PortName: What?
+    BaseNodeGUID: 99c22e0c-58f4-4435-9f27-870228baa1b8
+    TargetNodeGUID: b80e642e-6e7c-4ca5-a51f-f76802baae34
+    TypeID: 0
+  - PortName: Are you okay
+    BaseNodeGUID: b80e642e-6e7c-4ca5-a51f-f76802baae34
+    TargetNodeGUID: f34e6df0-7ac7-4726-aefa-b038cdc31127
+    TypeID: 0
+  - PortName: I think i'll go
+    BaseNodeGUID: f34e6df0-7ac7-4726-aefa-b038cdc31127
+    TargetNodeGUID: 68b59594-0a6a-4e2f-a932-f2ce43914710
+    TypeID: 0
+  - PortName: So I've heard
+    BaseNodeGUID: 6ce12194-2711-419f-9a09-a791b0c1914a
+    TargetNodeGUID: dceb2fe6-8074-40f8-93e6-037404592241
+    TypeID: 0
+  - PortName: The gushing.. siren?
+    BaseNodeGUID: dceb2fe6-8074-40f8-93e6-037404592241
+    TargetNodeGUID: b29c4e81-954d-4737-b508-892dc31bd177
+    TypeID: 0
+  - PortName: I don't understand
+    BaseNodeGUID: b29c4e81-954d-4737-b508-892dc31bd177
+    TargetNodeGUID: b1572d03-7e3a-4c79-8151-e30ab9415505
+    TypeID: 0
+  - PortName: Bye
+    BaseNodeGUID: b1572d03-7e3a-4c79-8151-e30ab9415505
+    TargetNodeGUID: 68b59594-0a6a-4e2f-a932-f2ce43914710
+    TypeID: 0
+  DialogueNodeDatas:
+  - NodeGUID: 6ce12194-2711-419f-9a09-a791b0c1914a
+    Position: {x: 551, y: 161}
+    DialogueText: Lo and behold, the driver in the flesh. It has been most lonesome
+      since the last perished.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 99c22e0c-58f4-4435-9f27-870228baa1b8
+    Position: {x: 1355, y: 84}
+    DialogueText: The fish does not realise it has been hooked until it breaths the
+      cold air that spells its doom.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: b80e642e-6e7c-4ca5-a51f-f76802baae34
+    Position: {x: 2160, y: 84}
+    DialogueText: ONCE THE ROARING WAVES BREAK UPON THE ROCKS THE BLITHELY ONE REACHES
+      UP TO CATCH THE GULL
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: f34e6df0-7ac7-4726-aefa-b038cdc31127
+    Position: {x: 3056, y: 84}
+    DialogueText: THE CRUSHING WEIGHT OF A FREIGHT THOUGHT LOST BUT NO. IT IS NOT
+      LOST BUT SIMPLY FORGOTTEN
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: dceb2fe6-8074-40f8-93e6-037404592241
+    Position: {x: 1372, y: 264}
+    DialogueText: Ye have heard the call of gushing siren then, beckoning you into
+      the cold embrace of Harbour Town
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: b29c4e81-954d-4737-b508-892dc31bd177
+    Position: {x: 2263, y: 264}
+    DialogueText: ONCE THE NETS ARE CAST, THERE CAN BE NO DOUBT. THOU MUST REEL IN
+      THAT WHICH IS CAUGHT.
+    IsEndNode: 0
+    CharacterID: 0
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: b1572d03-7e3a-4c79-8151-e30ab9415505
+    Position: {x: 3153, y: 298}
+    DialogueText: THERE IS NO UNDERSTANDING BETWEEN A ROCK AT THE SEA FLOOR AND A
+      GULL FLYING ABOVE THE WAVES
+    IsEndNode: 0
+    CharacterID: 0
+    IsContinue: 0
+    ContinueTimer: 
+  AttributeNodeDatas: []
+  TraitNodeDatas: []
+  StoryNodeDatas: []
+  ExposedProperties: []
+  EndNodeDatas:
+  - NodeGUID: 68b59594-0a6a-4e2f-a932-f2ce43914710
+    Position: {x: 4066, y: 235}
+  ItemNodeDatas: []
