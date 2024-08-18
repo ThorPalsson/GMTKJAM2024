@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f8f88dde47c764d94d3ba715cba1f1, type: 3}
+  m_Name: Starting Dialogue
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - PortName: First Node
+    BaseNodeGUID: 30005fdb-efc9-4f55-82fa-168a16661d57
+    TargetNodeGUID: 292ceb21-45e5-43bd-b623-b7e994ad1df4
+    TypeID: 0
+  - PortName: Continue
+    BaseNodeGUID: 292ceb21-45e5-43bd-b623-b7e994ad1df4
+    TargetNodeGUID: 44fe4b35-bdf6-42c5-b1af-4cb5083d9fc4
+    TypeID: 0
+  - PortName: Continue
+    BaseNodeGUID: 44fe4b35-bdf6-42c5-b1af-4cb5083d9fc4
+    TargetNodeGUID: a0f2eab3-2ddf-4be7-b78f-7b8c0b05bdc2
+    TypeID: 0
+  DialogueNodeDatas:
+  - NodeGUID: 292ceb21-45e5-43bd-b623-b7e994ad1df4
+    Position: {x: 562, y: 200}
+    DialogueText: Hello Lass, Can I get back the looking glass?
+    IsEndNode: 0
+    CharacterID: 0
+    IsContinue: 0
+    ContinueTimer: 0
+  - NodeGUID: 44fe4b35-bdf6-42c5-b1af-4cb5083d9fc4
+    Position: {x: 980.6667, y: 208}
+    DialogueText: Hello there duck, you have quite the luck, this is a party you
+      see and we are missing partyhats three.
+    IsEndNode: 0
+    CharacterID: 3
+    IsContinue: 0
+    ContinueTimer: 0
+  - NodeGUID: a0f2eab3-2ddf-4be7-b78f-7b8c0b05bdc2
+    Position: {x: 1659.3334, y: 208}
+    DialogueText: Finding them is a must, otherwise this party will become a bust.
+    IsEndNode: 0
+    CharacterID: 3
+    IsContinue: 0
+    ContinueTimer: 
+  AttributeNodeDatas: []
+  TraitNodeDatas: []
+  StoryNodeDatas: []
+  ExposedProperties: []
+  EndNodeDatas:
+  - NodeGUID: 1a4d96d0-e56d-4db1-bd4d-8e036c9918e3
+    Position: {x: 0, y: 0}
+  ItemNodeDatas: []

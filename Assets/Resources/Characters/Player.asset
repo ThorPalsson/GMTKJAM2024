@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b733399ff74bf5a4fb3b54530a7a85ee, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  CharacterName: Mister Duckinton
+  UnknownName: Mister Duckinton
+  CharacterImage: {fileID: 0}
+  CharacterUiColor: {r: 0.1792453, g: 0.13612497, b: 0.13612497, a: 0}
+  IsKnown: 0

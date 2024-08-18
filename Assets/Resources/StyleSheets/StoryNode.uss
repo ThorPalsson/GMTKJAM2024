@@ -1,0 +1,4 @@
+﻿StoryNode #title
+{
+    background-color: rgb(132, 5, 148); 
+}
