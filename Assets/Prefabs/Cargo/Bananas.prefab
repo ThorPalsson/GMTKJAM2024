@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &212967116043150547
 GameObject:
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &350906912578800163
 GameObject:
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &405282585972916569
 GameObject:
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &474030484185197384
 GameObject:
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &513686600578908364
 GameObject:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &622857061017736911
 GameObject:
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &672158070433000179
 GameObject:
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &700769508785008739
 GameObject:
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &765061269565662406
 GameObject:
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &804124370705828404
 GameObject:
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &819303371754198997
 GameObject:
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &856875383154385107
 GameObject:
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &936088697354053972
 GameObject:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &971748435637070086
 GameObject:
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &1040565091493646484
 GameObject:
@@ -1582,7 +1582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &1056496471373966181
 GameObject:
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &1124740878369463137
 GameObject:
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &1379313084958415684
 GameObject:
@@ -1879,7 +1879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &1673270730990122153
 GameObject:
@@ -1978,7 +1978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2154916727403833124
 GameObject:
@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2194583564947950886
 GameObject:
@@ -2176,7 +2176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2202220684916230545
 GameObject:
@@ -2275,7 +2275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2244399659105224199
 GameObject:
@@ -2374,7 +2374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2514420555970105492
 GameObject:
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2570753922716588056
 GameObject:
@@ -2572,7 +2572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2635287946800807538
 GameObject:
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2808938426912247982
 GameObject:
@@ -2770,7 +2770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2861585575736447838
 GameObject:
@@ -2869,7 +2869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2954366197451669185
 GameObject:
@@ -2968,7 +2968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2954415130049629953
 GameObject:
@@ -3067,7 +3067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &2974935021341480886
 GameObject:
@@ -3166,7 +3166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3225150307904424985
 GameObject:
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3316700137276443769
 GameObject:
@@ -3364,7 +3364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3345120152379459006
 GameObject:
@@ -3463,7 +3463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3534431463873720553
 GameObject:
@@ -3562,7 +3562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3728606707034476236
 GameObject:
@@ -3661,7 +3661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3761480263749385419
 GameObject:
@@ -3760,7 +3760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3847264649432036791
 GameObject:
@@ -3986,7 +3986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3928881279498707769
 GameObject:
@@ -4085,7 +4085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &3953359092077686013
 GameObject:
@@ -4184,7 +4184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4154420253934366770
 GameObject:
@@ -4283,7 +4283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4186231429936432830
 GameObject:
@@ -4382,7 +4382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4250901672667025873
 GameObject:
@@ -4481,7 +4481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4317340802054767355
 GameObject:
@@ -4580,7 +4580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4318650947657600524
 GameObject:
@@ -4679,7 +4679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4374709957319654321
 GameObject:
@@ -4778,7 +4778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4526305182546803213
 GameObject:
@@ -4877,7 +4877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4908207763681108915
 GameObject:
@@ -4976,7 +4976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4933877063626392585
 GameObject:
@@ -5075,7 +5075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &4950403459291091805
 GameObject:
@@ -5174,7 +5174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5028170023782800142
 GameObject:
@@ -5273,7 +5273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5039413228251136509
 GameObject:
@@ -5372,7 +5372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5158806913062905945
 GameObject:
@@ -5471,7 +5471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5244394051946208732
 GameObject:
@@ -5570,7 +5570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5322365644882578897
 GameObject:
@@ -5669,7 +5669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5617276455761628328
 GameObject:
@@ -5768,7 +5768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5630184301544099222
 GameObject:
@@ -5867,7 +5867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5635293502014054783
 GameObject:
@@ -5966,7 +5966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5684697973361394185
 GameObject:
@@ -6065,7 +6065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5755922475193269844
 GameObject:
@@ -6164,7 +6164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5794372439346233659
 GameObject:
@@ -6263,7 +6263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5821804974709650629
 GameObject:
@@ -6362,7 +6362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5892676024138490808
 GameObject:
@@ -6461,7 +6461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &5943562625692422255
 GameObject:
@@ -6560,7 +6560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6071256274467834348
 GameObject:
@@ -6659,7 +6659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6178150073180194927
 GameObject:
@@ -6758,7 +6758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6188219512586627183
 GameObject:
@@ -6857,7 +6857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6207295824924565788
 GameObject:
@@ -6956,7 +6956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6247728859318920778
 GameObject:
@@ -7055,7 +7055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6448260518800777267
 GameObject:
@@ -7154,7 +7154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6713923503657941118
 GameObject:
@@ -7253,7 +7253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6723923933757617657
 GameObject:
@@ -7352,7 +7352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6774093368789515543
 GameObject:
@@ -7451,7 +7451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6806666092477092020
 GameObject:
@@ -7550,7 +7550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6877347110260682769
 GameObject:
@@ -7649,7 +7649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6933008041945827139
 GameObject:
@@ -7748,7 +7748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &6974244565451128029
 GameObject:
@@ -7847,7 +7847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7237746013706196256
 GameObject:
@@ -7946,7 +7946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7361824186676505754
 GameObject:
@@ -8045,7 +8045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7432928782556738109
 GameObject:
@@ -8144,7 +8144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7473758199937817399
 GameObject:
@@ -8243,7 +8243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7620179698695000918
 GameObject:
@@ -8342,7 +8342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7624422106412616633
 GameObject:
@@ -8441,7 +8441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7865527030270486965
 GameObject:
@@ -8540,7 +8540,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &7985607041974013434
 GameObject:
@@ -8639,7 +8639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8149382406618153139
 GameObject:
@@ -8738,7 +8738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8411389888063201247
 GameObject:
@@ -8837,7 +8837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8436586915456288901
 GameObject:
@@ -8936,7 +8936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8480136459097720601
 GameObject:
@@ -9035,7 +9035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8533944242312793625
 GameObject:
@@ -9134,7 +9134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8591085159095459698
 GameObject:
@@ -9233,7 +9233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8672166108967350516
 GameObject:
@@ -9332,7 +9332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8734547222779525435
 GameObject:
@@ -9431,7 +9431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8755964369949110005
 GameObject:
@@ -9530,7 +9530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1 &8986401855562184937
 GameObject:
@@ -9629,7 +9629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasFallen: 0
   fallenEffect: {fileID: 1804206099813350, guid: 4dd02b5f854b6c84990fbeb810abffe4, type: 3}
-  cargoValue: 15
+  cargoValue: 5
   useFallEffect: 1
 --- !u!1001 &54414880118542067
 PrefabInstance:

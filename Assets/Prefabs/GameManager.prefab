@@ -98,7 +98,7 @@ MonoBehaviour:
     Type: 4
   CargoTypes:
   - CargoName: Few Packages
-    CargoWorth: 600
+    CargoWorth: 650
     CargoImage: {fileID: 21300000, guid: 89163ef3d2926324ba1d1cb8938437c8, type: 3}
     CargoObject: {fileID: 8420211528690218389, guid: 204b6428b4c4a3346bbb07571ca0d776, type: 3}
   - CargoName: Some Packages
@@ -106,21 +106,33 @@ MonoBehaviour:
     CargoImage: {fileID: 21300000, guid: 3084f6b64485cb644b3e75ab562c3370, type: 3}
     CargoObject: {fileID: 5827281751256571309, guid: 4cde687e6ece9784c8bf4e8ba75832fa, type: 3}
   - CargoName: Many Packages
-    CargoWorth: 2400
+    CargoWorth: 2900
     CargoImage: {fileID: 21300000, guid: f2ced2b405148ee46b7fdd4a2a26cd8a, type: 3}
     CargoObject: {fileID: 2400608624617441557, guid: 6ff00b8c6a7eaa240989b3f6cc6bbfb8, type: 3}
   - CargoName: Bananas
-    CargoWorth: 1450
+    CargoWorth: 480
     CargoImage: {fileID: 21300000, guid: 0aa740d84f1aeef4cb3db16f3f30f5f7, type: 3}
     CargoObject: {fileID: 3847264649432036791, guid: cafd06cc22cfe744a8a480146873afac, type: 3}
   - CargoName: Many Bananas
-    CargoWorth: 4250
+    CargoWorth: 1440
     CargoImage: {fileID: 21300000, guid: e395897bbbf35c64781eea3964605e04, type: 3}
     CargoObject: {fileID: 8996600593067277562, guid: d61a8c64af4c82840bd42c1a56ee14a2, type: 3}
   - CargoName: So Many Bananas!
-    CargoWorth: 8500
+    CargoWorth: 2880
     CargoImage: {fileID: 21300000, guid: c7f0d39eaf83a214ca554b2283b53071, type: 3}
     CargoObject: {fileID: 3635923278336177091, guid: d46cc5e3b0508784e9c3ebcf054c02b4, type: 3}
+  - CargoName: Golden Bananas
+    CargoWorth: 6000
+    CargoImage: {fileID: 21300000, guid: 06c3a26b9fa66644da0bb3205f583ece, type: 3}
+    CargoObject: {fileID: 5129117001081109971, guid: 903f4774246be26428a4f9c397831186, type: 3}
+  - CargoName: Safes
+    CargoWorth: 5000
+    CargoImage: {fileID: 21300000, guid: 112b2efc8ff7b25499f17288f769e242, type: 3}
+    CargoObject: {fileID: 7329272890591470930, guid: 6a6657820e0331d4eb2da5f86fa43494, type: 3}
+  - CargoName: Skulls
+    CargoWorth: 2400
+    CargoImage: {fileID: 21300000, guid: b0c64681fb0b53b4db497bcc0b085f14, type: 3}
+    CargoObject: {fileID: 870633151695803419, guid: dafbc31415be7654098adb09fa3f3811, type: 3}
   savedCargo: {fileID: 0}
 --- !u!114 &4545325686633364767
 MonoBehaviour:
