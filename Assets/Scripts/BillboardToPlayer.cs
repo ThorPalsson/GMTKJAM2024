@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BillboardToPlayer : MonoBehaviour
 {
-    private Transform cameraTransform;
+    [SerializeField] private Transform cameraTransform;
 
     void Start()
     {
-        cameraTransform = Camera.main.transform;
+       // cameraTransform = Camera.main.transform;
     }
 
     void Update()

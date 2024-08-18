@@ -2314,7 +2314,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -322.63867, y: 262.68573}
-  m_SizeDelta: {x: 20, y: -565.13}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6871770428656539811
 MonoBehaviour:
@@ -4615,7 +4615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2788396431708234883
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4655,6 +4655,10 @@ MonoBehaviour:
   characters: {fileID: 11400000, guid: a18c73a65efb1d34388b2d22aa5335dc, type: 2}
   dialogueText: {fileID: 1151907335603807881}
   talkerText: {fileID: 8490014916220484084}
+  IntroDialouge: {fileID: 11400000, guid: 3d965d421ffd0334a9020b71dcf5aff0, type: 2}
+  truck: {fileID: 0}
+  truckCamera: {fileID: 0}
+  introCamera: {fileID: 0}
   TestContainer: {fileID: 11400000, guid: 0012f68d5c7fb134eb448593043341fe, type: 2}
 --- !u!1 &7364385453680130609
 GameObject:

@@ -26,6 +26,10 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TMP_Text talkerText;
     private DialogueContainer _currentDialogue;
     private Outpost outpost; 
+    [SerializeField] private DialogueContainer IntroDialouge; 
+    private bool isIntro = true; 
+
+    [SerializeField] private GameObject truck, truckCamera, introCamera; 
     
     //public bool ActiveDialogue => ConversationParent.activeSelf; 
 
@@ -48,7 +52,7 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
-    
+        StartDialogue(IntroDialouge, null); 
     }
 
     public void StartDialogue(DialogueContainer dialogue, Outpost post)
@@ -151,7 +155,16 @@ public class Dialogue : MonoBehaviour
             ActiveText.RemoveRange(0, textToRemove);
         }
 
-        outpost.EndDialogue();
+        if (!isIntro)
+            outpost.EndDialogue();
+        else 
+        {
+            isIntro = false;
+            truck.SetActive(true); 
+            introCamera.SetActive(false);
+            truckCamera.SetActive(true);
+        }
+        
 
         print ("Ending Dialogue");
         dialogueText.text = "";
