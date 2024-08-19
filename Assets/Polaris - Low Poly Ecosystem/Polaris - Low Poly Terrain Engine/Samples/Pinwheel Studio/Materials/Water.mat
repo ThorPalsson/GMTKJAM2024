@@ -12,11 +12,12 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _SPECULAR_SETUP
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
@@ -72,6 +73,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WaveMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -95,7 +100,9 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Cull: 2
+    - _CrestFoamStrength: 1
+    - _CrestMaxDepth: 1
+    - _Cull: 0
     - _Cutoff: 0.5
     - _DepthTint: -0.21
     - _DetailAlbedoMapScale: 1
@@ -105,6 +112,8 @@ Material:
     - _DstBlendAlpha: 10
     - _EnvironmentReflections: 1
     - _FoamDistance: 0.46
+    - _FoamNoiseScaleHQ: 3
+    - _FoamNoiseSpeedHQ: 1
     - _FoamStrengthMax: 2
     - _FoamStrengthMin: 1
     - _Fresnel: 0.1
@@ -114,31 +123,42 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _MaxDepth: 8
+    - _MeshNoise: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.02
+    - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.5
+    - _RippleHeight: 0.1
+    - _RippleNoiseScale: 1
+    - _RippleSpeed: 5
+    - _ShorelineFoamStrength: 1
+    - _Smoothness: 0.647
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5
     - _SrcBlendAlpha: 1
     - _Surface: 1
     - _UVSec: 0
+    - _WaveDeform: 0.3
     - _WaveFrequency: 1
     - _WaveHeight: 1
-    - _WorkflowMode: 1
+    - _WaveLength: 1
+    - _WaveSpeed: 1
+    - _WaveSteepness: 1
+    - _WorkflowMode: 0
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.41037738, g: 1, b: 0.99416465, a: 0.34117648}
-    - _Color: {r: 0.41037735, g: 1, b: 0.99416465, a: 0.34117648}
+    - _BaseColor: {r: 0.11480955, g: 0.5660378, b: 0.5343726, a: 0.92156863}
+    - _Color: {r: 0.11480952, g: 0.5660378, b: 0.53437257, a: 0.92156863}
     - _DepthColor: {r: 0, g: 0.4195638, b: 0.9811321, a: 0.85}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SpecColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
     - _Specular: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+    - _WaveDirection: {r: 1, g: 0, b: 0, a: 0}
+    - _WaveMaskBounds: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &9083785100480722543
