@@ -54,7 +54,7 @@ MonoBehaviour:
     Position: {x: 1205, y: 284}
     DialogueText: 
     IsEndNode: 1
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: e791f0ad-960e-424b-839a-ff01c61ad6dc
@@ -62,7 +62,7 @@ MonoBehaviour:
     DialogueText: Never you mind, I have a job for you. There are some packages that
       need to get to Dusty Hollow.
     IsEndNode: 0
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: e1a64629-456e-49e7-89fd-774f30aad447
@@ -71,7 +71,7 @@ MonoBehaviour:
       will be deducted off your pay however. And seeing your ride, you seem to need
       the money.
     IsEndNode: 0
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: 785af741-d066-47a7-af80-7382dac76ad8
@@ -79,7 +79,7 @@ MonoBehaviour:
     DialogueText: Greetings, I am glad you are here. It has been so lonely since
       we lost our last driver.
     IsEndNode: 0
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: c3880c88-9785-4935-b292-c5e336c057d1
@@ -87,7 +87,7 @@ MonoBehaviour:
     DialogueText: Hah! I could hear your gearbox from miles away. Now no more of
       this! You have a job to do. Off you go!
     IsEndNode: 0
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: 14b83f00-3bc4-4e19-9c92-0983741e579f
@@ -95,7 +95,7 @@ MonoBehaviour:
     DialogueText: Oh I also forgot to mention, it is imperative that you scale the
       summit of the mountain.
     IsEndNode: 0
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: ee10fd38-a081-4007-bc04-d94b6b7cf75d

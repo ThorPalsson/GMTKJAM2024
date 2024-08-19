@@ -91,7 +91,7 @@ MonoBehaviour:
     DialogueText: ONCE THE NETS ARE CAST, THERE CAN BE NO DOUBT. THOU MUST REEL IN
       THAT WHICH IS CAUGHT.
     IsEndNode: 0
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   - NodeGUID: b1572d03-7e3a-4c79-8151-e30ab9415505
@@ -99,7 +99,7 @@ MonoBehaviour:
     DialogueText: THERE IS NO UNDERSTANDING BETWEEN A ROCK AT THE SEA FLOOR AND A
       GULL FLYING ABOVE THE WAVES
     IsEndNode: 0
-    CharacterID: 0
+    CharacterID: 1
     IsContinue: 0
     ContinueTimer: 
   AttributeNodeDatas: []

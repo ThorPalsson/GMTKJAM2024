@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b733399ff74bf5a4fb3b54530a7a85ee, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  CharacterName: Mister Duckinton
-  UnknownName: Mister Duckinton
+  CharacterId: 0
+  CharacterName: Jonathan
+  UnknownName: Jonathan
   CharacterImage: {fileID: 0}
   CharacterUiColor: {r: 0.1792453, g: 0.13612497, b: 0.13612497, a: 0}
   IsKnown: 0
+  Initiative: 0
