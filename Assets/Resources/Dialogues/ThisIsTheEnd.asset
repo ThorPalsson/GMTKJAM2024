@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f8f88dde47c764d94d3ba715cba1f1, type: 3}
+  m_Name: ThisIsTheEnd
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - PortName: First Node
+    BaseNodeGUID: 4f99d930-64d1-4b5d-80ce-bed69b2c3b19
+    TargetNodeGUID: 8c5f4255-f00b-4572-8513-5685166987a5
+    TypeID: 0
+  - PortName: I feel pretty warm actually
+    BaseNodeGUID: 8c5f4255-f00b-4572-8513-5685166987a5
+    TargetNodeGUID: 7bf1968b-4d14-48e0-adbe-08930e28ccec
+    TypeID: 0
+  - PortName: 'Are you a priest? '
+    BaseNodeGUID: 8c5f4255-f00b-4572-8513-5685166987a5
+    TargetNodeGUID: 156e44de-a195-4494-953b-eff6421d85e4
+    TypeID: 0
+  - PortName: Huh, okay
+    BaseNodeGUID: 156e44de-a195-4494-953b-eff6421d85e4
+    TargetNodeGUID: 1a4f6729-aebf-4da8-823f-ed24609b4284
+    TypeID: 0
+  - PortName: I see ?
+    BaseNodeGUID: 7bf1968b-4d14-48e0-adbe-08930e28ccec
+    TargetNodeGUID: 1a4f6729-aebf-4da8-823f-ed24609b4284
+    TypeID: 0
+  - PortName: Wait.. is that...
+    BaseNodeGUID: 1a4f6729-aebf-4da8-823f-ed24609b4284
+    TargetNodeGUID: 4c4adc48-4e37-402f-89c7-05c778b4529b
+    TypeID: 0
+  - PortName: Nah, I purely did this for the sport of it
+    BaseNodeGUID: 4c4adc48-4e37-402f-89c7-05c778b4529b
+    TargetNodeGUID: c163b8ba-878b-4749-b0d6-ec8aefdf76b6
+    TypeID: 0
+  - PortName: Bye
+    BaseNodeGUID: c163b8ba-878b-4749-b0d6-ec8aefdf76b6
+    TargetNodeGUID: add4038d-468c-4029-a169-a2f1fbecdb40
+    TypeID: 0
+  - PortName: 'Yes I do '
+    BaseNodeGUID: 4c4adc48-4e37-402f-89c7-05c778b4529b
+    TargetNodeGUID: aacc2237-b512-416c-8013-ed038af05c87
+    TypeID: 0
+  - PortName: I wish I never had to scale a mountain again
+    BaseNodeGUID: aacc2237-b512-416c-8013-ed038af05c87
+    TargetNodeGUID: e8a676e9-c0ef-4ee2-bc27-446de2fd8458
+    TypeID: 0
+  - PortName: I wish to live in the world from Water World
+    BaseNodeGUID: aacc2237-b512-416c-8013-ed038af05c87
+    TargetNodeGUID: e8a676e9-c0ef-4ee2-bc27-446de2fd8458
+    TypeID: 0
+  - PortName: spooky
+    BaseNodeGUID: e8a676e9-c0ef-4ee2-bc27-446de2fd8458
+    TargetNodeGUID: 2a908e04-90cb-4132-95de-ca0cd1b694fd
+    TypeID: 0
+  DialogueNodeDatas:
+  - NodeGUID: 8c5f4255-f00b-4572-8513-5685166987a5
+    Position: {x: 586, y: 200}
+    DialogueText: HELLO THERE! It warms my heart you would bless me with your presence.
+      The mountaintop has been cold and lonely since the last driver perished.
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 7bf1968b-4d14-48e0-adbe-08930e28ccec
+    Position: {x: 1680, y: 161}
+    DialogueText: Your warmth comes from the radiance of the blessed one my child
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 156e44de-a195-4494-953b-eff6421d85e4
+    Position: {x: 1680, y: 303}
+    DialogueText: I am but a humble shepherd tending to his flock, a father to one
+      but a guardian to all
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 1a4f6729-aebf-4da8-823f-ed24609b4284
+    Position: {x: 2426, y: 219}
+    DialogueText: As is written the scripture "And so the lion fell in love with
+      the lamb. What a stupid lamb. What a sick, masochistic lion."
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: 4c4adc48-4e37-402f-89c7-05c778b4529b
+    Position: {x: 3380, y: 219}
+    DialogueText: It matters not child, you have come such a long way, you have scaled
+      to the highest peaks to see me, I am sure you want your reward
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: c163b8ba-878b-4749-b0d6-ec8aefdf76b6
+    Position: {x: 4471, y: 321}
+    DialogueText: Oh, well in that case I'll leave you to it then, goodbye
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: aacc2237-b512-416c-8013-ed038af05c87
+    Position: {x: 4504, y: 119}
+    DialogueText: THEN BY THE POWER INVESTED IN ME BY THE BLESSED MEYER I GRANT YOU
+      A WISH
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  - NodeGUID: e8a676e9-c0ef-4ee2-bc27-446de2fd8458
+    Position: {x: 5336, y: 186}
+    DialogueText: SO IT SHALL BE! *weird magic stuff fizzles in the air*
+    IsEndNode: 0
+    CharacterID: 1
+    IsContinue: 0
+    ContinueTimer: 
+  AttributeNodeDatas: []
+  TraitNodeDatas: []
+  StoryNodeDatas: []
+  ExposedProperties: []
+  EndNodeDatas:
+  - NodeGUID: add4038d-468c-4029-a169-a2f1fbecdb40
+    Position: {x: 5042, y: 400}
+  - NodeGUID: 2a908e04-90cb-4132-95de-ca0cd1b694fd
+    Position: {x: 5950, y: 196}
+  ItemNodeDatas: []
