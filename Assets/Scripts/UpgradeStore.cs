@@ -18,6 +18,8 @@ public class UpgradeStore : MonoBehaviour
     }
     public UiItem[] UiItems;
 
+    private GameObject clickSound => ReferenceManager.Instance.UiClickSound; 
+
     private void Start() {
         RollItems();
     }
@@ -36,6 +38,7 @@ public class UpgradeStore : MonoBehaviour
 
             uiItem.purchaseButton.onClick.RemoveAllListeners();
             ConnectUpgradeToButton(uiItem.purchaseButton, upgrades[i].Type, upgrades[i]);
+            uiItem.purchaseButton.onClick.AddListener(() => Instantiate(clickSound));
         }
     }
 

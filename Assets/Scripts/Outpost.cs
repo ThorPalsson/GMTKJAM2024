@@ -62,7 +62,7 @@ public class Outpost : MonoBehaviour
         {
             foreach (var c in cargos)
             {
-                print ($"adding {c.name} with value of {c.cargoValue}"); 
+                //print ($"adding {c.name} with value of {c.cargoValue}"); 
                 values += c.cargoValue; 
                 weight += c.Weight; 
                 c.DestroyCargo(true);
@@ -70,7 +70,7 @@ public class Outpost : MonoBehaviour
             hasBroughtCargo = true;
         }
 
-        print($"Brought {values}$ worth of cargo");
+        //print($"Brought {values}$ worth of cargo");
 
         leaveOutpost.onClick.AddListener(() => LeaveOutpost());
         moneyBrought = values; 

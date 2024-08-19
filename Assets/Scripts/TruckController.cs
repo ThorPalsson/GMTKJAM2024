@@ -79,12 +79,21 @@ public class TruckController : MonoBehaviour
 	[SerializeField] private AudioClip[] gearClips; 
 	[SerializeField] private AudioSource gearSource;
 
+	[SerializeField] private Camera carCamera;
+	[SerializeField] private float maxFovChange = 10; 
+	private float maxFov; 
+	private float minFov; 
+
+
 
 	[Header("Visual Upgrades")]
 	[SerializeField] private GameObject backBar; 
 
 	private void Awake() {
 		rb = GetComponent<Rigidbody>();
+
+		minFov = carCamera.fieldOfView; 
+		maxFov = minFov + maxFovChange; 
 	}
 
 	private void Start() {
@@ -277,6 +286,7 @@ public class TruckController : MonoBehaviour
 		PitchAudio();
 
 		atThrottleLimit = visualSpeed > maxThrottleSpeed; 
+		carCamera.fieldOfView = Mathf.Min(minFov + (visualSpeed * 0.1f), maxFov); 
 
 		if (!atThrottleLimit && visualSpeed > maxThrottleSpeed - 10)
 		{

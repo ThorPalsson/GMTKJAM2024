@@ -19,6 +19,8 @@ public class CargoSelection : MonoBehaviour
 
     private TruckController trucK;
 
+    private GameObject clickSound => ReferenceManager.Instance.UiClickSound; 
+
     public void Start()
     {
         trucK = ReferenceManager.Instance.Truck; 
@@ -51,6 +53,7 @@ public class CargoSelection : MonoBehaviour
             uiItem.selectionButton.onClick.RemoveAllListeners();
 
             ConnectSelectionButton(uiItem.selectionButton, items[i].CargoObject);
+            uiItem.selectionButton.onClick.AddListener(() => Instantiate(clickSound)); 
         }
     }
 

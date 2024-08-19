@@ -14,6 +14,8 @@ public class ReferenceManager : MonoBehaviour
     public Vector3 CameraOriginalPosition; 
     public StatusPanel statusPanel;
 
+    public GameObject UiClickSound;
+
 
     private void Awake() {
         if (Instance != null && Instance != this)

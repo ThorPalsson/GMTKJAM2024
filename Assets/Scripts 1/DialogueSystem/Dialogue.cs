@@ -33,6 +33,8 @@ public class Dialogue : MonoBehaviour
     
     //public bool ActiveDialogue => ConversationParent.activeSelf; 
 
+    private GameObject clickSound => ReferenceManager.Instance.UiClickSound; 
+
     [Header("Debug")]
     public DialogueContainer TestContainer;
 
@@ -205,6 +207,7 @@ public class Dialogue : MonoBehaviour
             Button answerButton = Instantiate(AnswerButton, transform.position, Quaternion.identity, TextContainer).GetComponent<Button>();
             answerButton.GetComponentInChildren<TMP_Text>().text = answer.PortName; 
             answerButton.onClick.AddListener(delegate{NextDialogue(answer.TargetNodeGUID);});  
+            answerButton.onClick.AddListener(() => Instantiate(clickSound));
             ActiveAnswers.Add(answerButton.gameObject); 
         }
 
