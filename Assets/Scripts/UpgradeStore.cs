@@ -15,17 +15,19 @@ public class UpgradeStore : MonoBehaviour
         public TMP_Text costText;
         public Image itemImage;
         public Button purchaseButton;
+        public GameObject NoAfford; 
     }
     public UiItem[] UiItems;
 
     private GameObject clickSound => ReferenceManager.Instance.UiClickSound; 
 
-    private void Start() {
+    private void OnEnable() {
         RollItems();
     }
 
     private void RollItems()
     {
+        var cash = ReferenceManager.Instance.gameManager.Money;
         var upgrades = ReferenceManager.Instance.gameManager.GetItems();
         EventSystem.current.SetSelectedGameObject(null);
         for (int i = 0; i < UiItems.Length; i++)
@@ -37,7 +39,17 @@ public class UpgradeStore : MonoBehaviour
             uiItem.itemImage.sprite = upgrades[i].ItemImage;
 
             uiItem.purchaseButton.onClick.RemoveAllListeners();
-            ConnectUpgradeToButton(uiItem.purchaseButton, upgrades[i].Type, upgrades[i]);
+            if (cash >= upgrades[i].ItemCost)
+            {
+                uiItem.NoAfford.SetActive(false);
+                uiItem.purchaseButton.interactable = true;
+                ConnectUpgradeToButton(uiItem.purchaseButton, upgrades[i].Type, upgrades[i]);
+            }else 
+            {
+                uiItem.NoAfford.SetActive(true); 
+                uiItem.purchaseButton.interactable = false;
+            }
+
             uiItem.purchaseButton.onClick.AddListener(() => Instantiate(clickSound));
         }
     }
