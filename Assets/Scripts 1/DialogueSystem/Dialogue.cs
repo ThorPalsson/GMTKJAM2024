@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using ColorUtility = UnityEngine.ColorUtility;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class Dialogue : MonoBehaviour
 
     private GameObject clickSound => ReferenceManager.Instance.UiClickSound; 
 
+    private bool endTheGame = false;
+
     [Header("Debug")]
     public DialogueContainer TestContainer;
 
@@ -54,11 +57,12 @@ public class Dialogue : MonoBehaviour
 
     private void Start()
     {
-        StartDialogue(IntroDialouge, null); 
+        StartDialogue(IntroDialouge, null, false); 
     }
 
-    public void StartDialogue(DialogueContainer dialogue, Outpost post)
+    public void StartDialogue(DialogueContainer dialogue, Outpost post, bool endGame = false)
     {
+        endTheGame = endGame; 
         outpost = post;
         _currentDialogue = dialogue; 
         NextDialogue(_currentDialogue.NodeLinks[0].TargetNodeGUID);  
@@ -106,9 +110,6 @@ public class Dialogue : MonoBehaviour
 
         dialogueText.text = SetUpDialogueUI(nodeData);
         StartCoroutine(SetAnswers(Guid)); 
-
-        //NodeLinkData[] answerArray = _currentDialogue.NodeLinks.Where(t => t.BaseNodeGUID == Guid).ToArray();
-       // StartCoroutine(WaitAndNextMessage(3f, answerArray[0]));
     }
 
     private IEnumerator WaitAndNextMessage(float wait, NodeLinkData node)
@@ -167,6 +168,10 @@ public class Dialogue : MonoBehaviour
             truckCamera.SetActive(true);
         }
         
+        if (endTheGame)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
 
         print ("Ending Dialogue");
         dialogueText.text = "";

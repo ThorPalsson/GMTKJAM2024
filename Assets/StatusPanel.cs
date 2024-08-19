@@ -21,6 +21,7 @@ public class StatusPanel : MonoBehaviour
         MoneyText.text = $"Your brought {money}$ worth of cargo"; 
         LifeTimeMoney.text = $"{gameManager.LifeTimeMoney}$";
         LifeTimeWeight.text = $"{gameManager.AllGatheredMass}kg"; 
+        QuoteText.text = Quotes[Random.Range(0, Quotes.Length)];
 
         panel.SetActive(true);
 

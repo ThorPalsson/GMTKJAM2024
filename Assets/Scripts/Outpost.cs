@@ -33,6 +33,7 @@ public class Outpost : MonoBehaviour
     private bool inDialouge;
 
     private int moneyBrought; 
+    private int zero = 0; 
 
     
     void Start()
@@ -92,7 +93,14 @@ public class Outpost : MonoBehaviour
             Cursor.lockState = CursorLockMode.None; 
             
             movingCamera = false;
-            ReferenceManager.Instance.statusPanel.ShowPanel(moneyBrought, this); 
+
+            ToggleUI(true);
+
+            if (zero == 0)
+            {
+                ReferenceManager.Instance.statusPanel.ShowPanel(moneyBrought, this); 
+                zero ++; 
+            }
             
         }
     }

@@ -6,6 +6,7 @@ public class NewDialogue : MonoBehaviour
     public DialogueContainer Conversation; 
     [SerializeField] private Transform cameraPosition;
     [SerializeField] private Outpost outpost; 
+    [SerializeField] private bool EndTheGame;
 
     public void StartDialogue()
     {
