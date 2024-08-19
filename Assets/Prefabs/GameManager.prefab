@@ -54,6 +54,8 @@ MonoBehaviour:
   DialougeCanvas: {fileID: 0}
   DialogueSystem: {fileID: 0}
   CameraOriginalPosition: {x: 0, y: 0, z: 0}
+  statusPanel: {fileID: 0}
+  UiClickSound: {fileID: 0}
 --- !u!114 &9164501069300928761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,28 +69,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Money: 0
+  LifeTimeMoney: 0
   Upgrades:
   - ItemName: More Power
     ItemCost: 200
-    ItemImage: {fileID: 21300000, guid: 3f75184d321990942a27a7b5900b8c1c, type: 3}
+    ItemImage: {fileID: 21300000, guid: 361c6c8e19e068241a628db64eee651e, type: 3}
     OneTimeUse: 0
     Used: 0
     Type: 0
   - ItemName: Better Brakes
     ItemCost: 100
-    ItemImage: {fileID: 21300000, guid: 3b33e10fd57ee18419bb55a6cd501662, type: 3}
+    ItemImage: {fileID: 21300000, guid: 90a2b8ce7fc8dce42ab0dd47365cccbf, type: 3}
     OneTimeUse: 0
     Used: 0
     Type: 1
   - ItemName: Nitro
     ItemCost: 300
-    ItemImage: {fileID: 21300000, guid: cb947969c12ba8445abc96a09ad49b9e, type: 3}
+    ItemImage: {fileID: 21300000, guid: d97fc364c8771414d889e1528cc21393, type: 3}
     OneTimeUse: 0
     Used: 0
     Type: 2
   - ItemName: Gearbox
     ItemCost: 400
-    ItemImage: {fileID: 21300000, guid: 07eeef3511179ba4cb1b68f9f30da79a, type: 3}
+    ItemImage: {fileID: 21300000, guid: cde051f33faeaaf47802009da45bad59, type: 3}
     OneTimeUse: 0
     Used: 0
     Type: 3
@@ -152,6 +155,7 @@ MonoBehaviour:
     CargoImage: {fileID: 21300000, guid: e7ee48b06a0c19641a202a01f628b1d7, type: 3}
     CargoObject: {fileID: 1652402003775046603, guid: 8abce3ea5058a0c46932bf6e94a9a323, type: 3}
   savedCargo: {fileID: 0}
+  AllGatheredMass: 0
 --- !u!114 &4545325686633364767
 MonoBehaviour:
   m_ObjectHideFlags: 0
